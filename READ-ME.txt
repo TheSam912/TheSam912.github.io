@@ -1,6 +1,6 @@
-  =>  Template Name    : DevFolio - Developer Portfolio Template
+  =>  Template Name    : DarkCV - Bootstrap CV Resume Template
 
-  =>  Template Link    : https://htmlcodex.com/developer-portfolio-template
+  =>  Template Link    : https://htmlcodex.com/bootstrap-cv-resume-template
 
   =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
 

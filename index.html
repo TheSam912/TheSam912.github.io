@@ -273,7 +273,7 @@
                         <h1 class="title pb-3 mb-5">Portfolio</h1>
                         <div class="row">
                             <div class="col-12">
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-12 text-center mb-2">
                                         <ul class="list-inline mb-4" id="portfolio-flters">
                                             <li class="btn btn-secondary active"  data-filter="*"><i class="fa fa-star me-2"></i>All</li>
@@ -281,7 +281,7 @@
                                             <li class="btn btn-secondary" data-filter=".second"><i class="fa fa-mobile-alt me-2"></i>Development</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="row portfolio-container">
                                     <div class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
@@ -420,8 +420,11 @@
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div> -->
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="button" id="sendMessageBtn">Send Message</button>
                                 </div>
                             </div>
                         </form>
@@ -469,10 +472,12 @@
         <script src="lib/lightbox/js/lightbox.min.js"></script>
 
         <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <!-- <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script> -->
 
         <!-- Template Javascript -->
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/form-validator.js"></script>
     </body>
 </html>

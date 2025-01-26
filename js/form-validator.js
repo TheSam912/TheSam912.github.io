@@ -12,7 +12,12 @@ document
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Validate inputs
-    if (!name || !emailRegex.test(email) || !subject || !message.replace(/\s/g, '').length) {
+    if (
+      !name ||
+      !emailRegex.test(email) ||
+      !subject ||
+      !message.replace(/\s/g, "").length
+    ) {
       alert("Please fill in all the required fields.");
       return;
     }
@@ -28,9 +33,17 @@ document
       .then((response) => {
         alert("Message sent successfully!");
         console.log("SUCCESS:", response);
+        clearForm()
       })
       .catch((error) => {
         alert("Failed to send message. Please try again.");
         console.error("ERROR:", error);
       });
   });
+// Function to clear the form fields
+function clearForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("subject").value = "";
+  document.getElementById("message").value = "";
+}

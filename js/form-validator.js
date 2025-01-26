@@ -5,10 +5,14 @@ emailjs.init("4WM-giqcjhNoQDgRy"); // Replace with your actual Public Key
 document
   .getElementById("sendMessageBtn")
   .addEventListener("click", function () {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const subject = document.getElementById("subject").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const subjectField = document.getElementById("subject");
+    const messageField = document.getElementById("message");
+    const name = nameField.value.trim();
+    const email = emailField.value.trim();
+    const subject = subjectField.value.trim();
+    const message = messageField.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     // Validate inputs
@@ -33,17 +37,15 @@ document
       .then((response) => {
         alert("Message sent successfully!");
         console.log("SUCCESS:", response);
-        clearForm()
+
+        // Clear form fields manually
+        nameField.value = "";
+        emailField.value = "";
+        subjectField.value = "";
+        messageField.value = "";
       })
       .catch((error) => {
         alert("Failed to send message. Please try again.");
         console.error("ERROR:", error);
       });
   });
-// Function to clear the form fields
-function clearForm() {
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("subject").value = "";
-  document.getElementById("message").value = "";
-}

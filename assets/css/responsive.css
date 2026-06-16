@@ -1,0 +1,712 @@
+/* ===================================
+   RESPONSIVE
+   Breakpoints: 1200 | 1150 | 992 | 768 | 576 | 400
+=================================== */
+
+/* ===================================
+   LARGE LAPTOP (≤1200px)
+=================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr 280px;
+        gap: 36px;
+    }
+
+    .portfolio-grid {
+        gap: 20px;
+    }
+
+    .services-grid {
+        gap: 20px;
+    }
+}
+
+
+/* ===================================
+   TABLET LANDSCAPE (≤1150px)
+   Mobile nav · stacked layouts
+=================================== */
+
+@media (max-width: 1150px) {
+
+    :root {
+        --nav-offset: 96px;
+        --section-inline: clamp(1rem, 4.5vw, 2.5rem);
+    }
+
+    body {
+        padding-top: 88px;
+    }
+
+    /* ---- Navbar ---- */
+
+    .navbar {
+        position: fixed;
+        top: max(12px, env(safe-area-inset-top, 0px));
+        left: var(--section-inline);
+        right: var(--section-inline);
+        width: auto;
+        margin: 0;
+        z-index: 9997;
+        padding: 10px 18px;
+    }
+
+    .nav-links,
+    .talk-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+        padding-top: max(30px, env(safe-area-inset-top, 0px));
+    }
+
+    .logo img {
+        height: 44px;
+    }
+
+    /* ---- Hero ---- */
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 40px;
+        margin: 24px var(--section-inline) 0;
+    }
+
+    .hero-left {
+        width: 100%;
+        max-width: none;
+    }
+
+    .hero-right {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .hero-right img {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        min-width: 0;
+        min-height: 54px;
+        font-size: 15px;
+    }
+
+    /* ---- Sections — unified horizontal spacing ---- */
+
+    .stats-section,
+    .about-section,
+    .services-section,
+    .skills-section,
+    .experience-section,
+    .portfolio-section,
+    .contact-section,
+    .footer-section {
+        padding-inline: var(--section-inline);
+    }
+
+    /* ---- Stats ---- */
+
+    .stats-section {
+        margin-top: 56px;
+    }
+
+    .stats-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px;
+    }
+
+    /* ---- About ---- */
+
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-left {
+        order: 1;
+    }
+
+    .about-right {
+        order: 2;
+    }
+
+    .about-title,
+    .about-text {
+        max-width: 100%;
+    }
+
+    /* ---- Services ---- */
+
+    .services-section {
+        padding-bottom: 48px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    /* ---- Banner ---- */
+
+    .banner-section {
+        margin-top: 0;
+    }
+
+    .banner-section img {
+        height: clamp(180px, 34vw, 420px);
+    }
+
+    /* ---- Skills marquee ---- */
+
+    .skills-marquee {
+        padding: 18px 0;
+        border-radius: 20px;
+    }
+
+    .skills-track .skill-item {
+        min-width: 132px;
+    }
+
+    /* ---- Experience ---- */
+
+    .experience-section {
+        margin-top: 56px;
+    }
+
+    .experience-head__row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* ---- Portfolio ---- */
+
+    .portfolio-section {
+        margin-top: 56px;
+    }
+
+    .portfolio-grid {
+        gap: 18px;
+    }
+
+    /* ---- Contact ---- */
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
+    .contact-info {
+        order: 2;
+        width: 100%;
+        max-width: none;
+        margin-top: 0;
+    }
+
+    .contact-title {
+        max-width: 100%;
+    }
+}
+
+
+/* ===================================
+   TABLET (≤992px)
+=================================== */
+
+@media (max-width: 992px) {
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-stats {
+        width: 100%;
+    }
+}
+
+
+/* ===================================
+   TABLET PORTRAIT (≤768px)
+=================================== */
+
+@media (max-width: 768px) {
+
+    :root {
+        --nav-offset: 88px;
+        --section-inline: clamp(0.875rem, 4vw, 1.5rem);
+    }
+
+    body {
+        padding-top: 82px;
+    }
+
+    .navbar {
+        padding: 8px 14px;
+        border-radius: 14px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    /* ---- Hero ---- */
+
+    .hero {
+        gap: 32px;
+        margin-top: 16px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 7vw, 2.125rem);
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.75;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-btn-primary,
+    .hero-btn-secondary {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    /* ---- Section titles ---- */
+
+    .about-title,
+    .services-title,
+    .skills-title,
+    .experience-title,
+    .portfolio-title,
+    .contact-title {
+        font-size: clamp(1.5rem, 5.5vw, 1.75rem);
+        line-height: 1.35;
+    }
+
+    .section-tag {
+        font-size: 11px;
+    }
+
+    /* ---- Stats ---- */
+
+    .stats-section {
+        margin-top: 48px;
+    }
+
+    .stats-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 14px;
+    }
+
+    .stats-item {
+        padding: 20px 18px;
+    }
+
+    .stats-item h3 {
+        font-size: 28px;
+    }
+
+    /* ---- About ---- */
+
+    .about-section {
+        margin-top: 48px;
+    }
+
+    .about-wrapper {
+        gap: 28px;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .info-card {
+        padding: 22px;
+    }
+
+    .info-item {
+        gap: 14px;
+    }
+
+    .info-item i {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        font-size: 15px;
+    }
+
+    /* ---- Services ---- */
+
+    .services-section {
+        margin-top: 48px;
+        padding-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .service-top {
+        margin-bottom: 14px;
+    }
+
+    /* ---- Banner ---- */
+
+    .banner-section img {
+        height: clamp(160px, 42vw, 320px);
+    }
+
+    /* ---- Skills ---- */
+
+    .skills-section {
+        margin-top: 32px;
+    }
+
+    .skills-marquee {
+        padding: 14px 0;
+    }
+
+    .skills-track .skill-item {
+        min-width: 118px;
+        flex-direction: column;
+        gap: 8px;
+        min-height: 104px;
+        padding: 14px 12px;
+    }
+
+    .skills-track .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skills-track .skill-item span {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* ---- Experience ---- */
+
+    .experience-title {
+        font-size: clamp(1.5rem, 5.5vw, 1.75rem);
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .exp-card {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .exp-card__info h3 {
+        font-size: 16px;
+    }
+
+    .exp-card__list li {
+        font-size: 12px;
+    }
+
+    /* ---- Portfolio ---- */
+
+    .portfolio-section {
+        margin-top: 48px;
+    }
+
+    .portfolio-item {
+        padding: 16px;
+        border-radius: 20px;
+    }
+
+    /* ---- Contact ---- */
+
+    .contact-section {
+        margin-top: 48px;
+    }
+
+    .contact-title {
+        margin-bottom: 24px;
+    }
+
+    .contact-info {
+        padding: 22px;
+    }
+
+    .input-box {
+        height: 54px;
+        padding: 0 16px;
+    }
+
+    .textarea-box {
+        height: 150px;
+        padding-top: 18px;
+    }
+
+    .textarea-box i {
+        margin-top: 4px;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        font-size: 16px; /* prevents iOS zoom on focus */
+    }
+
+    /* ---- Footer ---- */
+
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: none;
+        justify-self: center;
+    }
+
+    .footer-socials {
+        justify-self: center;
+        order: 2;
+    }
+
+    .footer-copy {
+        justify-self: center;
+        order: 3;
+        white-space: normal;
+        line-height: 1.6;
+    }
+
+    /* ---- Success modal ---- */
+
+    .success-modal-content {
+        width: min(92vw, 420px);
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+
+    .success-icon {
+        width: 68px;
+        height: 68px;
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    .success-modal h3 {
+        font-size: 22px;
+    }
+
+    .success-modal p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .success-modal button {
+        min-height: 50px;
+    }
+}
+
+
+/* ===================================
+   MOBILE (≤576px)
+=================================== */
+
+@media (max-width: 576px) {
+
+    body {
+        padding-top: 76px;
+    }
+
+    .navbar {
+        top: max(8px, env(safe-area-inset-top, 0px));
+        left: max(12px, env(safe-area-inset-left, 0px));
+        right: max(12px, env(safe-area-inset-right, 0px));
+    }
+
+    .mobile-menu {
+        width: min(300px, 100vw);
+        padding-left: max(24px, env(safe-area-inset-left, 0px));
+        padding-right: max(24px, env(safe-area-inset-right, 0px));
+    }
+
+    .hero-title {
+        font-size: clamp(1.55rem, 8vw, 1.85rem);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .stats-item {
+        gap: 12px;
+        padding: 18px 16px;
+    }
+
+    .stats-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 17px;
+    }
+
+    .stats-item h3 {
+        font-size: 26px;
+    }
+
+    .stats-item p {
+        font-size: 13px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .info-card {
+        padding: 18px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .service-icon {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        font-size: 16px;
+    }
+
+    .service-top h3 {
+        font-size: 16px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .skills-track .skill-item {
+        min-width: 108px;
+        min-height: 96px;
+    }
+
+    .skills-track .skill-item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .skills-track .skill-item span {
+        font-size: 12px;
+    }
+
+    .exp-card {
+        padding: 16px;
+    }
+
+    .exp-card__tag {
+        margin-left: 0;
+    }
+
+    .portfolio-item {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .footer-copy {
+        font-size: 12px;
+    }
+
+    .footer-socials {
+        gap: 14px;
+    }
+
+    .success-modal-content {
+        width: 94vw;
+        padding: 24px 18px;
+    }
+
+    .success-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .success-modal h3 {
+        font-size: 20px;
+    }
+
+    .success-modal p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .success-modal button {
+        width: 100%;
+        min-height: 48px;
+        font-size: 14px;
+    }
+}
+
+
+/* ===================================
+   SMALL PHONES (≤400px)
+=================================== */
+
+@media (max-width: 400px) {
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .experience-stats__pill {
+        flex: 1;
+        justify-content: center;
+    }
+}

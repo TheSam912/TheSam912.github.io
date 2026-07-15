@@ -73,7 +73,7 @@ body::before {
 }
 
 /* Keep page sections above the aura — exclude fixed UI shells */
-body > *:not(script):not(.navbar):not(.mobile-menu):not(.nav-overlay):not(.success-modal):not(.cursor-dot) {
+body > *:not(script):not(.nav-shell):not(.navbar):not(.mobile-menu):not(.nav-overlay):not(.success-modal):not(.cursor-dot) {
     position: relative;
     z-index: 1;
 }
@@ -232,12 +232,28 @@ body {
     }
 }
 
-/* Re-assert fixed nav after animations.css (loaded last) */
+/* Re-assert fixed nav shell after animations.css (loaded last) */
 @media (max-width: 1150px) {
-    .navbar {
+    .nav-shell {
+        display: block;
         position: fixed;
         top: max(12px, env(safe-area-inset-top, 0px));
+        left: 0;
+        right: 0;
         z-index: 9997;
+        padding-inline: max(var(--nav-gutter), env(safe-area-inset-left, 0px));
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .nav-shell .navbar {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin: 0;
+        pointer-events: auto;
     }
 }
 

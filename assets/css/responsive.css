@@ -36,8 +36,9 @@
 @media (max-width: 1150px) {
 
     :root {
+        --nav-gutter: clamp(1.25rem, 4.5vw, 2rem);
+        --section-inline: var(--nav-gutter);
         --nav-offset: 96px;
-        --section-inline: clamp(1rem, 4.5vw, 2.5rem);
     }
 
     body {
@@ -46,18 +47,32 @@
 
     /* ---- Navbar ---- */
 
-    .navbar {
+    .nav-shell {
+        display: block;
         position: fixed;
         top: max(12px, env(safe-area-inset-top, 0px));
-        left: max(var(--section-inline), env(safe-area-inset-left, 0px));
-        right: max(var(--section-inline), env(safe-area-inset-right, 0px));
-        width: auto;
-        margin: 0;
+        left: 0;
+        right: 0;
         z-index: 9997;
+        padding-inline: max(var(--nav-gutter), env(safe-area-inset-left, 0px));
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .navbar {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin: 0;
+        z-index: 1;
         padding: 10px 16px;
         gap: 12px;
         box-sizing: border-box;
         max-width: none;
+        flex-wrap: nowrap;
+        pointer-events: auto;
     }
 
     .nav-links,
@@ -79,7 +94,7 @@
     .logo img {
         height: 44px;
         width: auto;
-        max-width: min(200px, 58vw);
+        max-width: min(200px, calc(100vw - (var(--nav-gutter) * 2) - 56px));
         object-fit: contain;
     }
 
@@ -95,7 +110,7 @@
 
     .mobile-menu {
         display: flex;
-        width: min(320px, 100vw);
+        width: min(320px, calc(100vw - var(--nav-gutter)));
         height: 100dvh;
         height: 100vh;
         padding-top: max(24px, calc(env(safe-area-inset-top, 0px) + 12px));
@@ -291,23 +306,28 @@
 @media (max-width: 768px) {
 
     :root {
+        --nav-gutter: clamp(1rem, 5vw, 1.5rem);
+        --section-inline: var(--nav-gutter);
         --nav-offset: 88px;
-        --section-inline: clamp(0.875rem, 4vw, 1.5rem);
     }
 
     body {
         padding-top: 82px;
     }
 
+    .nav-shell {
+        top: max(10px, env(safe-area-inset-top, 0px));
+    }
+
     .navbar {
-        padding: 8px 12px;
+        padding: 8px 14px;
         border-radius: 14px;
-        gap: 8px;
+        gap: 10px;
     }
 
     .logo img {
         height: 40px;
-        max-width: min(170px, 55vw);
+        max-width: min(170px, calc(100vw - (var(--nav-gutter) * 2) - 52px));
     }
 
     .menu-toggle {
@@ -316,7 +336,7 @@
     }
 
     .navbar.scrolled {
-        padding: 6px 12px;
+        padding: 6px 14px;
     }
 
     /* ---- Hero ---- */
@@ -605,24 +625,30 @@
 
 @media (max-width: 576px) {
 
+    :root {
+        --nav-gutter: clamp(1rem, 5vw, 1.25rem);
+        --section-inline: var(--nav-gutter);
+    }
+
     body {
         padding-top: 76px;
     }
 
-    .navbar {
+    .nav-shell {
         top: max(8px, env(safe-area-inset-top, 0px));
-        left: max(12px, env(safe-area-inset-left, 0px));
-        right: max(12px, env(safe-area-inset-right, 0px));
-        padding: 8px 10px;
+    }
+
+    .navbar {
+        padding: 8px 12px;
     }
 
     .logo img {
         height: 36px;
-        max-width: min(150px, 52vw);
+        max-width: min(150px, calc(100vw - (var(--nav-gutter) * 2) - 48px));
     }
 
     .mobile-menu {
-        width: min(300px, 100vw);
+        width: min(300px, calc(100vw - var(--nav-gutter)));
     }
 
     .mobile-menu a {
@@ -756,12 +782,12 @@
 @media (max-width: 400px) {
 
     .navbar {
-        padding: 6px 8px;
+        padding: 6px 10px;
     }
 
     .logo img {
         height: 32px;
-        max-width: min(140px, 48vw);
+        max-width: min(140px, calc(100vw - (var(--nav-gutter) * 2) - 44px));
     }
 
     .menu-toggle {

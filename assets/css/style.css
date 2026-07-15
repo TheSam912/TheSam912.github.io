@@ -38,7 +38,14 @@ video{
 
     --section-inline:clamp(1rem, 5vw, 4.5rem);
 
+    --nav-gutter:clamp(1rem, 5vw, 4.5rem);
+
     --nav-offset:120px;
+}
+
+/* Transparent wrapper — desktop layout ignores it */
+.nav-shell{
+    display:contents;
 }
 
 /* ===================================
@@ -2584,6 +2591,10 @@ section{
     background:none;
 
     cursor:pointer;
+
+    align-items:center;
+
+    justify-content:center;
 
     flex-direction:column;
 

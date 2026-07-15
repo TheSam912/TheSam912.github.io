@@ -209,16 +209,33 @@ body {
 
 /* =====================================================
    NAVBAR — compact-on-scroll
+   Sticky only on desktop. Mobile/tablet use position:fixed
+   from responsive.css — this file loads last, so sticky
+   must not override those breakpoints.
 ===================================================== */
 
 .navbar {
-    position: sticky;
-    top: 12px;
-    z-index: 50;
     transition:
         padding   600ms var(--ease-out-expo),
         box-shadow 600ms ease,
         backdrop-filter 600ms ease;
+}
+
+@media (min-width: 1151px) {
+    .navbar {
+        position: sticky;
+        top: 12px;
+        z-index: 50;
+    }
+}
+
+/* Re-assert fixed nav after animations.css (loaded last) */
+@media (max-width: 1150px) {
+    .navbar {
+        position: fixed;
+        top: max(12px, env(safe-area-inset-top, 0px));
+        z-index: 9997;
+    }
 }
 
 .navbar.scrolled {

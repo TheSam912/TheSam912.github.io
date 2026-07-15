@@ -37,17 +37,42 @@
 
         if (!mobileMenu || !overlay) return;
 
-        const open  = () => { mobileMenu.classList.add("active");    overlay.classList.add("active");    document.body.style.overflow = "hidden"; };
-        const close = () => { mobileMenu.classList.remove("active"); overlay.classList.remove("active"); document.body.style.overflow = "";        };
+        const open = () => {
+            mobileMenu.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden";
+            menuBtn?.setAttribute("aria-expanded", "true");
+            menuBtn?.setAttribute("aria-label", "Close menu");
+        };
 
-        menuBtn?.addEventListener("click",  open);
+        const close = () => {
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+            menuBtn?.setAttribute("aria-expanded", "false");
+            menuBtn?.setAttribute("aria-label", "Open menu");
+        };
+
+        menuBtn?.setAttribute("aria-expanded", "false");
+        menuBtn?.setAttribute("aria-controls", "mobile-menu");
+        mobileMenu.id = mobileMenu.id || "mobile-menu";
+
+        menuBtn?.addEventListener("click", () => {
+            mobileMenu.classList.contains("active") ? close() : open();
+        });
         closeBtn?.addEventListener("click", close);
-        overlay?.addEventListener("click",  close);
+        overlay?.addEventListener("click", close);
         mobileMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
 
         document.addEventListener("keydown", (e) => {
             if (e.key === "Escape" && mobileMenu.classList.contains("active")) close();
         });
+
+        // Close drawer if viewport grows past the mobile-nav breakpoint
+        const mq = window.matchMedia("(min-width: 1151px)");
+        const onBreakpoint = (e) => { if (e.matches) close(); };
+        if (mq.addEventListener) mq.addEventListener("change", onBreakpoint);
+        else mq.addListener(onBreakpoint);
     }
 
     // ===========================

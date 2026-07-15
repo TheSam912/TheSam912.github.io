@@ -72,8 +72,11 @@ body::before {
     100% { transform: translate3d(-15px, 15px, 0) scale(1);   }
 }
 
-/* keep all real content above the aura */
-body > *:not(script) { position: relative; z-index: 1; }
+/* Keep page sections above the aura — exclude fixed UI shells */
+body > *:not(script):not(.navbar):not(.mobile-menu):not(.nav-overlay):not(.success-modal):not(.cursor-dot) {
+    position: relative;
+    z-index: 1;
+}
 
 /* =====================================================
    SCROLL-DRIVEN REVEALS

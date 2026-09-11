@@ -21,49 +21,124 @@
 
 <body>
 
-    <div class="nav-shell">
-    <nav class="navbar">
+    
+<div class="nav-shell">
+    <nav class="navbar" aria-label="Primary">
 
-        <div class="logo">
-            <a href="#hero">
-                <img src="assets/images/textlogo.png" alt="Logo">
-            </a>
-        </div>
+        <a class="logo" href="#hero" aria-label="Home">
+            <img src="assets/images/textlogo.png" alt="The Sam">
+        </a>
 
         <ul class="nav-links">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+                            <li>
+                    <a
+                        href="#hero"
+                        class="active"                    >Home</a>
+                </li>
+                            <li>
+                    <a
+                        href="#about"
+                                            >About</a>
+                </li>
+                            <li>
+                    <a
+                        href="#services"
+                                            >Services</a>
+                </li>
+                            <li>
+                    <a
+                        href="#skills"
+                                            >Skills</a>
+                </li>
+                            <li>
+                    <a
+                        href="#experience"
+                                            >Experience</a>
+                </li>
+                            <li>
+                    <a
+                        href="#portfolio"
+                                            >Portfolio</a>
+                </li>
+                            <li>
+                    <a
+                        href="#contact"
+                                            >Contact</a>
+                </li>
+                    </ul>
 
-        <a href="#contact" class="talk-btn" data-magnetic>
-            Get In Touch        </a>
+        <div class="nav-actions">
+            <span class="nav-status" title="Available For Projects">
+                <span class="nav-status__dot" aria-hidden="true"></span>
+                <span class="nav-status__text">Available</span>
+            </span>
 
-        <button class="menu-toggle" aria-label="Open menu">
-            <span></span><span></span><span></span>
-        </button>
+            <a href="#contact" class="talk-btn" data-magnetic>
+                <span>Get In Touch</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
 
     </nav>
 </div>
 
 <div class="nav-overlay"></div>
 
-<div class="mobile-menu">
-    <button class="menu-close" aria-label="Close menu">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-    <a href="#contact" class="mobile-talk-btn">Get In Touch</a>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__head">
+        <div class="mobile-menu__brand">
+            <img src="assets/images/textlogo.png" alt="">
+            <span class="nav-status nav-status--menu">
+                <span class="nav-status__dot" aria-hidden="true"></span>
+                Available
+            </span>
+        </div>
+        <button class="menu-close" type="button" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+                    <a href="#hero">
+                <span class="mobile-menu__idx">01</span>
+                <span class="mobile-menu__label">Home</span>
+            </a>
+                    <a href="#about">
+                <span class="mobile-menu__idx">02</span>
+                <span class="mobile-menu__label">About</span>
+            </a>
+                    <a href="#services">
+                <span class="mobile-menu__idx">03</span>
+                <span class="mobile-menu__label">Services</span>
+            </a>
+                    <a href="#skills">
+                <span class="mobile-menu__idx">04</span>
+                <span class="mobile-menu__label">Skills</span>
+            </a>
+                    <a href="#experience">
+                <span class="mobile-menu__idx">05</span>
+                <span class="mobile-menu__label">Experience</span>
+            </a>
+                    <a href="#portfolio">
+                <span class="mobile-menu__idx">06</span>
+                <span class="mobile-menu__label">Portfolio</span>
+            </a>
+                    <a href="#contact">
+                <span class="mobile-menu__idx">07</span>
+                <span class="mobile-menu__label">Contact</span>
+            </a>
+            </nav>
+
+    <div class="mobile-menu__foot">
+        <a href="#contact" class="mobile-talk-btn">
+            <span>Get In Touch</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
 </div>
     
 <section id="hero" class="hero">
@@ -309,9 +384,9 @@ Passionate about problem-solving, innovation, and continuous learning. I thrive 
             class="skills-marquee"
             data-reveal="fade">
 
-                            <div class="skills-track"><div class="skill-item"><img src="assets/images/skills/flutter.png" alt="Flutter" loading="lazy" decoding="async" width="48" height="48"><span>Flutter</span></div><div class="skill-item"><img src="assets/images/skills/php.png" alt="PHP" loading="lazy" decoding="async" width="48" height="48"><span>PHP</span></div><div class="skill-item"><img src="assets/images/skills/laravel.png" alt="Laravel" loading="lazy" decoding="async" width="48" height="48"><span>Laravel</span></div><div class="skill-item"><img src="assets/images/skills/js.png" alt="JavaScript" loading="lazy" decoding="async" width="48" height="48"><span>JavaScript</span></div><div class="skill-item"><img src="assets/images/skills/html.png" alt="HTML" loading="lazy" decoding="async" width="48" height="48"><span>HTML</span></div><div class="skill-item"><img src="assets/images/skills/css.png" alt="CSS" loading="lazy" decoding="async" width="48" height="48"><span>CSS</span></div><div class="skill-item"><img src="assets/images/skills/vue.png" alt="Vue.js" loading="lazy" decoding="async" width="48" height="48"><span>Vue.js</span></div><div class="skill-item"><img src="assets/images/skills/figma.png" alt="Figma" loading="lazy" decoding="async" width="48" height="48"><span>Figma</span></div><div class="skill-item"><img src="assets/images/skills/java.png" alt="Java" loading="lazy" decoding="async" width="48" height="48"><span>Java</span></div><div class="skill-item"><img src="assets/images/skills/flutter.png" alt="Flutter" loading="lazy" decoding="async" width="48" height="48"><span>Flutter</span></div><div class="skill-item"><img src="assets/images/skills/php.png" alt="PHP" loading="lazy" decoding="async" width="48" height="48"><span>PHP</span></div><div class="skill-item"><img src="assets/images/skills/laravel.png" alt="Laravel" loading="lazy" decoding="async" width="48" height="48"><span>Laravel</span></div><div class="skill-item"><img src="assets/images/skills/js.png" alt="JavaScript" loading="lazy" decoding="async" width="48" height="48"><span>JavaScript</span></div><div class="skill-item"><img src="assets/images/skills/html.png" alt="HTML" loading="lazy" decoding="async" width="48" height="48"><span>HTML</span></div><div class="skill-item"><img src="assets/images/skills/css.png" alt="CSS" loading="lazy" decoding="async" width="48" height="48"><span>CSS</span></div><div class="skill-item"><img src="assets/images/skills/vue.png" alt="Vue.js" loading="lazy" decoding="async" width="48" height="48"><span>Vue.js</span></div><div class="skill-item"><img src="assets/images/skills/figma.png" alt="Figma" loading="lazy" decoding="async" width="48" height="48"><span>Figma</span></div><div class="skill-item"><img src="assets/images/skills/java.png" alt="Java" loading="lazy" decoding="async" width="48" height="48"><span>Java</span></div></div>
+                            <div class="skills-track"><div class="skill-item"><img src="assets/images/skills/flutter.png" alt="Flutter" loading="lazy" decoding="async" width="28" height="28"><span>Flutter</span></div><div class="skill-item"><img src="assets/images/skills/php.png" alt="PHP" loading="lazy" decoding="async" width="28" height="28"><span>PHP</span></div><div class="skill-item"><img src="assets/images/skills/laravel.png" alt="Laravel" loading="lazy" decoding="async" width="28" height="28"><span>Laravel</span></div><div class="skill-item"><img src="assets/images/skills/js.png" alt="JavaScript" loading="lazy" decoding="async" width="28" height="28"><span>JavaScript</span></div><div class="skill-item"><img src="assets/images/skills/html.png" alt="HTML" loading="lazy" decoding="async" width="28" height="28"><span>HTML</span></div><div class="skill-item"><img src="assets/images/skills/css.png" alt="CSS" loading="lazy" decoding="async" width="28" height="28"><span>CSS</span></div><div class="skill-item"><img src="assets/images/skills/vue.png" alt="Vue.js" loading="lazy" decoding="async" width="28" height="28"><span>Vue.js</span></div><div class="skill-item"><img src="assets/images/skills/figma.png" alt="Figma" loading="lazy" decoding="async" width="28" height="28"><span>Figma</span></div><div class="skill-item"><img src="assets/images/skills/java.png" alt="Java" loading="lazy" decoding="async" width="28" height="28"><span>Java</span></div><div class="skill-item"><img src="assets/images/skills/flutter.png" alt="Flutter" loading="lazy" decoding="async" width="28" height="28"><span>Flutter</span></div><div class="skill-item"><img src="assets/images/skills/php.png" alt="PHP" loading="lazy" decoding="async" width="28" height="28"><span>PHP</span></div><div class="skill-item"><img src="assets/images/skills/laravel.png" alt="Laravel" loading="lazy" decoding="async" width="28" height="28"><span>Laravel</span></div><div class="skill-item"><img src="assets/images/skills/js.png" alt="JavaScript" loading="lazy" decoding="async" width="28" height="28"><span>JavaScript</span></div><div class="skill-item"><img src="assets/images/skills/html.png" alt="HTML" loading="lazy" decoding="async" width="28" height="28"><span>HTML</span></div><div class="skill-item"><img src="assets/images/skills/css.png" alt="CSS" loading="lazy" decoding="async" width="28" height="28"><span>CSS</span></div><div class="skill-item"><img src="assets/images/skills/vue.png" alt="Vue.js" loading="lazy" decoding="async" width="28" height="28"><span>Vue.js</span></div><div class="skill-item"><img src="assets/images/skills/figma.png" alt="Figma" loading="lazy" decoding="async" width="28" height="28"><span>Figma</span></div><div class="skill-item"><img src="assets/images/skills/java.png" alt="Java" loading="lazy" decoding="async" width="28" height="28"><span>Java</span></div></div>
             
-                            <div class="skills-track skills-track--reverse"><div class="skill-item"><img src="assets/images/skills/mysql.png" alt="MySQL" loading="lazy" decoding="async" width="48" height="48"><span>MySQL</span></div><div class="skill-item"><img src="assets/images/skills/mongodb.png" alt="MongoDB" loading="lazy" decoding="async" width="48" height="48"><span>MongoDB</span></div><div class="skill-item"><img src="assets/images/skills/swift.png" alt="Swift" loading="lazy" decoding="async" width="48" height="48"><span>Swift</span></div><div class="skill-item"><img src="assets/images/skills/wordpress.png" alt="WordPress" loading="lazy" decoding="async" width="48" height="48"><span>WordPress</span></div><div class="skill-item"><img src="assets/images/skills/git.png" alt="Git" loading="lazy" decoding="async" width="48" height="48"><span>Git</span></div><div class="skill-item"><img src="assets/images/skills/docker.png" alt="Docker" loading="lazy" decoding="async" width="48" height="48"><span>Docker</span></div><div class="skill-item"><img src="assets/images/skills/nodejs.png" alt="Node.js" loading="lazy" decoding="async" width="48" height="48"><span>Node.js</span></div><div class="skill-item"><img src="assets/images/skills/aws.png" alt="AWS" loading="lazy" decoding="async" width="48" height="48"><span>AWS</span></div><div class="skill-item"><img src="assets/images/skills/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async" width="48" height="48"><span>Bootstrap</span></div><div class="skill-item"><img src="assets/images/skills/mysql.png" alt="MySQL" loading="lazy" decoding="async" width="48" height="48"><span>MySQL</span></div><div class="skill-item"><img src="assets/images/skills/mongodb.png" alt="MongoDB" loading="lazy" decoding="async" width="48" height="48"><span>MongoDB</span></div><div class="skill-item"><img src="assets/images/skills/swift.png" alt="Swift" loading="lazy" decoding="async" width="48" height="48"><span>Swift</span></div><div class="skill-item"><img src="assets/images/skills/wordpress.png" alt="WordPress" loading="lazy" decoding="async" width="48" height="48"><span>WordPress</span></div><div class="skill-item"><img src="assets/images/skills/git.png" alt="Git" loading="lazy" decoding="async" width="48" height="48"><span>Git</span></div><div class="skill-item"><img src="assets/images/skills/docker.png" alt="Docker" loading="lazy" decoding="async" width="48" height="48"><span>Docker</span></div><div class="skill-item"><img src="assets/images/skills/nodejs.png" alt="Node.js" loading="lazy" decoding="async" width="48" height="48"><span>Node.js</span></div><div class="skill-item"><img src="assets/images/skills/aws.png" alt="AWS" loading="lazy" decoding="async" width="48" height="48"><span>AWS</span></div><div class="skill-item"><img src="assets/images/skills/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async" width="48" height="48"><span>Bootstrap</span></div></div>
+                            <div class="skills-track skills-track--reverse"><div class="skill-item"><img src="assets/images/skills/mysql.png" alt="MySQL" loading="lazy" decoding="async" width="28" height="28"><span>MySQL</span></div><div class="skill-item"><img src="assets/images/skills/mongodb.png" alt="MongoDB" loading="lazy" decoding="async" width="28" height="28"><span>MongoDB</span></div><div class="skill-item"><img src="assets/images/skills/swift.png" alt="Swift" loading="lazy" decoding="async" width="28" height="28"><span>Swift</span></div><div class="skill-item"><img src="assets/images/skills/wordpress.png" alt="WordPress" loading="lazy" decoding="async" width="28" height="28"><span>WordPress</span></div><div class="skill-item"><img src="assets/images/skills/git.png" alt="Git" loading="lazy" decoding="async" width="28" height="28"><span>Git</span></div><div class="skill-item"><img src="assets/images/skills/docker.png" alt="Docker" loading="lazy" decoding="async" width="28" height="28"><span>Docker</span></div><div class="skill-item"><img src="assets/images/skills/nodejs.png" alt="Node.js" loading="lazy" decoding="async" width="28" height="28"><span>Node.js</span></div><div class="skill-item"><img src="assets/images/skills/aws.png" alt="AWS" loading="lazy" decoding="async" width="28" height="28"><span>AWS</span></div><div class="skill-item"><img src="assets/images/skills/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async" width="28" height="28"><span>Bootstrap</span></div><div class="skill-item"><img src="assets/images/skills/mysql.png" alt="MySQL" loading="lazy" decoding="async" width="28" height="28"><span>MySQL</span></div><div class="skill-item"><img src="assets/images/skills/mongodb.png" alt="MongoDB" loading="lazy" decoding="async" width="28" height="28"><span>MongoDB</span></div><div class="skill-item"><img src="assets/images/skills/swift.png" alt="Swift" loading="lazy" decoding="async" width="28" height="28"><span>Swift</span></div><div class="skill-item"><img src="assets/images/skills/wordpress.png" alt="WordPress" loading="lazy" decoding="async" width="28" height="28"><span>WordPress</span></div><div class="skill-item"><img src="assets/images/skills/git.png" alt="Git" loading="lazy" decoding="async" width="28" height="28"><span>Git</span></div><div class="skill-item"><img src="assets/images/skills/docker.png" alt="Docker" loading="lazy" decoding="async" width="28" height="28"><span>Docker</span></div><div class="skill-item"><img src="assets/images/skills/nodejs.png" alt="Node.js" loading="lazy" decoding="async" width="28" height="28"><span>Node.js</span></div><div class="skill-item"><img src="assets/images/skills/aws.png" alt="AWS" loading="lazy" decoding="async" width="28" height="28"><span>AWS</span></div><div class="skill-item"><img src="assets/images/skills/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async" width="28" height="28"><span>Bootstrap</span></div></div>
             
         </div>
 
@@ -349,166 +424,249 @@ Passionate about problem-solving, innovation, and continuous learning. I thrive 
         <div class="experience-grid" data-reveal-stagger data-reveal="fade">
 
                             
-                <article class="exp-card exp-card--current">
+                <article class="exp-card exp-card--current exp-card--collapsible is-open">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">01</span>
-                        <time class="exp-card__date">Oct 2025 — Apr 2026</time>
-                                                    <span class="exp-card__tag">Current</span>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="true"
+                            aria-controls="exp-body-1"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">01</span>
+                            <time class="exp-card__date">Oct 2025 — Present</time>
+                                                            <span class="exp-card__tag">Current</span>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>PHP Laravel &amp; Vue.js Developer</h3>
-                            <p>Corefinity (Destinology)</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>PHP Laravel &amp; Vue.js Developer</h3>
+                                <p>Corefinity (Destinology)</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Developed and maintained a holiday search and booking platform using Laravel and Vue.js.</li>
-                                                            <li>Built core flows for destination discovery, search/filtering, and selecting flights, accommodation, and holiday extras.</li>
-                                                            <li>Implemented responsive, reusable UI components in Vue.js to improve UX across desktop and mobile.</li>
-                                                            <li>Integrated backend APIs and database logic in Laravel to support dynamic content and booking-related data.</li>
-                                                            <li>Collaborated with the Corefinity team in an agile workflow, delivering features, bug fixes, and production support.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-1">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Built and maintained the Destinology holiday booking platform with Laravel and Vue.js.</li>
+                                                                            <li>Delivered search, filtering, and booking flows for flights, stays, and holiday extras.</li>
+                                                                            <li>Shipped reusable Vue components and production fixes in an agile delivery team.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
                             
-                <article class="exp-card">
+                <article class="exp-card exp-card--collapsible">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">02</span>
-                        <time class="exp-card__date">Jan 2025 — Mar 2025</time>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="exp-body-2"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">02</span>
+                            <time class="exp-card__date">Jan 2025 — Mar 2025</time>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-solid fa-layer-group"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>Fullstack Developer</h3>
-                            <p>WooCom Ecommerce (Startup)</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>Fullstack Developer</h3>
+                                <p>WooCom Ecommerce (Startup)</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Built a responsive e-commerce website and mobile app for a startup.</li>
-                                                            <li>Converted Figma designs into a cross-platform experience (web/mobile/tablet) with adaptive layouts.</li>
-                                                            <li>Developed a custom Firebase-powered admin panel for real-time data management.</li>
-                                                            <li>Implemented Firebase Auth and Firestore for secure login and order/customer data storage.</li>
-                                                            <li>Delivered a dynamic, device-optimized UI for a smooth user experience.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-2">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Shipped a responsive e-commerce website and mobile app from Figma designs.</li>
+                                                                            <li>Built a Firebase admin panel with Auth and Firestore for live order management.</li>
+                                                                            <li>Delivered adaptive UI across web, mobile, and tablet.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
                             
-                <article class="exp-card">
+                <article class="exp-card exp-card--collapsible">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">03</span>
-                        <time class="exp-card__date">Sep 2023 — Mar 2024</time>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="exp-body-3"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">03</span>
+                            <time class="exp-card__date">Sep 2023 — Mar 2024</time>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>Flutter Application Developer</h3>
-                            <p>NIU Nature Application</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>Flutter Application Developer</h3>
+                                <p>NIU Nature Application</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Collaborated with a team to launch a healthcare app offering daily programs from esteemed German physicians.</li>
-                                                            <li>Developed daily schedules with top German doctors, optimizing patient treatment plans and contributing to a 30% rise in positive patient feedback.</li>
-                                                            <li>Rolled out a health monitoring dashboard, driving a 45% surge in user engagement and a 20% boost in app revenue in the first half-year.</li>
-                                                            <li>Integrated Apple &amp; Google authentication and in-app purchases, increasing user engagement by 30%.</li>
-                                                            <li>Introduced in-app purchase options for iOS and Android, contributing to a 35% growth in digital sales revenue.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-3">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Helped launch a Flutter healthcare app with daily programs from German physicians.</li>
+                                                                            <li>Built a health monitoring dashboard that improved engagement and early revenue.</li>
+                                                                            <li>Integrated Apple/Google auth and in-app purchases on iOS and Android.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
                             
-                <article class="exp-card">
+                <article class="exp-card exp-card--collapsible">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">04</span>
-                        <time class="exp-card__date">Oct 2018 — Oct 2019</time>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="exp-body-4"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">04</span>
+                            <time class="exp-card__date">Oct 2018 — Oct 2019</time>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>Flutter Application Developer</h3>
-                            <p>IRIC</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>Flutter Application Developer</h3>
+                                <p>IRIC</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Enhanced the smart home kit app UX through iterative design improvements and user testing, achieving a 35% increase in positive reviews and 60% rise in daily active users.</li>
-                                                            <li>Rolled out user-focused enhancements including gamification and social sharing, resulting in a 15% increase in daily active users over six months.</li>
-                                                            <li>Executed a robust user training program, decreasing support tickets by 20% and enhancing platform satisfaction by 35%.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-4">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Improved the smart home app UX through design iteration and user testing.</li>
+                                                                            <li>Added gamification and social features that grew daily active users.</li>
+                                                                            <li>Reduced support load with clearer onboarding and training flows.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
                             
-                <article class="exp-card">
+                <article class="exp-card exp-card--collapsible">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">05</span>
-                        <time class="exp-card__date">Oct 2018 — Oct 2019</time>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="exp-body-5"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">05</span>
+                            <time class="exp-card__date">Oct 2018 — Oct 2019</time>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-brands fa-android"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>Android Application Developer</h3>
-                            <p>Dade Gostar GHOMES</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-brands fa-android"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>Android Application Developer</h3>
+                                <p>Dade Gostar GHOMES</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Directed a multidisciplinary team in creating a telemedicine platform, reducing patient no-show rates by 20% and increasing satisfaction scores by 15%.</li>
-                                                            <li>Led hospital management app design and development.</li>
-                                                            <li>Delivered e-commerce solutions for healthcare clients.</li>
-                                                            <li>Built drug store and blood donation center applications.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-5">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Contributed to a telemedicine platform that reduced no-shows and improved satisfaction.</li>
+                                                                            <li>Designed and built hospital management and healthcare e-commerce apps.</li>
+                                                                            <li>Delivered drugstore and blood donation center Android applications.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
                             
-                <article class="exp-card">
+                <article class="exp-card exp-card--collapsible">
 
-                    <div class="exp-card__meta">
-                        <span class="exp-card__num">06</span>
-                        <time class="exp-card__date">Oct 2016 — Oct 2017</time>
-                                            </div>
+                    <div
+                        class="exp-card__header exp-card__header--toggle"
+                                                    role="button"
+                            tabindex="0"
+                            aria-expanded="false"
+                            aria-controls="exp-body-6"
+                                            >
+                        <div class="exp-card__meta">
+                            <span class="exp-card__num">06</span>
+                            <time class="exp-card__date">Oct 2016 — Oct 2017</time>
+                                                                                        <span class="exp-card__chevron" aria-hidden="true">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                                                    </div>
 
-                    <div class="exp-card__main">
-                        <div class="exp-card__icon">
-                            <i class="fa-brands fa-android"></i>
-                        </div>
-                        <div class="exp-card__info">
-                            <h3>Android Application Developer</h3>
-                            <p>Graph</p>
+                        <div class="exp-card__main">
+                            <div class="exp-card__icon">
+                                <i class="fa-brands fa-android"></i>
+                            </div>
+                            <div class="exp-card__info">
+                                <h3>Android Application Developer</h3>
+                                <p>Graph</p>
+                            </div>
                         </div>
                     </div>
 
-                                            <ul class="exp-card__list">
-                                                            <li>Mentored two colleagues in Android programming while enhancing company management systems.</li>
-                                                            <li>Led development of an e-commerce app and updated a legacy Basic4Android application.</li>
-                                                            <li>Designed UI for a card management app without backend support.</li>
-                                                    </ul>
+                                            <div class="exp-card__body" id="exp-body-6">
+                            <div class="exp-card__body-inner">
+                                <ul class="exp-card__list">
+                                                                            <li>Mentored two junior Android developers while improving internal systems.</li>
+                                                                            <li>Led e-commerce app development and modernized a legacy Basic4Android app.</li>
+                                                                            <li>Designed UI for a card management app shipped without backend support.</li>
+                                                                    </ul>
+                            </div>
+                        </div>
                     
                 </article>
 
@@ -531,54 +689,247 @@ Passionate about problem-solving, innovation, and continuous learning. I thrive 
             PORTFOLIO
         </span>
 
-        <h2 class="portfolio-title">
+        <div class="portfolio-head__row">
+            <h2 class="portfolio-title">
 
-            Selected
-            <span class="gradient-text">Projects.</span>
+                Selected
+                <span class="gradient-text">Projects.</span>
 
-        </h2>
+            </h2>
+
+                            <p class="portfolio-swipe-hint" aria-hidden="true">
+                    <i class="fa-solid fa-hand-pointer"></i>
+                    Swipe
+                </p>
+                    </div>
 
     </div>
 
-    <div
-        class="portfolio-grid"
-        data-reveal-stagger
-        data-reveal="fade">
+    <div class="portfolio-carousel" data-portfolio-carousel>
 
-        
+        <div
+            class="portfolio-grid"
+            data-reveal-stagger
+            data-reveal="fade"
+            tabindex="0"
+            role="list"
+            aria-label="Selected projects">
+
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="0"
+                    role="listitem"
+                    aria-label="View Wealthio">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-wealthio.webp"
+                            alt="Wealthio"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>Wealthio</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="1"
+                    role="listitem"
+                    aria-label="View UCAR">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-1.webp"
+                            alt="UCAR"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>UCAR</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="2"
+                    role="listitem"
+                    aria-label="View MediCare">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-2.webp"
+                            alt="MediCare"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>MediCare</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="3"
+                    role="listitem"
+                    aria-label="View Taskly">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-3.webp"
+                            alt="Taskly"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>Taskly</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="4"
+                    role="listitem"
+                    aria-label="View IRIC Smart Home">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-4.webp"
+                            alt="IRIC Smart Home"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>IRIC Smart Home</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="5"
+                    role="listitem"
+                    aria-label="View Recipe Finder">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-5.webp"
+                            alt="Recipe Finder"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>Recipe Finder</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                            <button
+                    type="button"
+                    class="portfolio-slide"
+                    data-portfolio-slide
+                    data-lightbox-index="6"
+                    role="listitem"
+                    aria-label="View Travel Booking Platform">
+                    <div class="portfolio-item">
+                        <img
+                            src="assets/images/portfolio/project-6.webp"
+                            alt="Travel Booking Platform"
+                            loading="lazy"
+                            decoding="async"
+                            width="800"
+                            height="600">
+                        <div class="portfolio-overlay">
+                            <h4>Travel Booking Platform</h4>
+                            <span class="portfolio-view-hint">
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                                View
+                            </span>
+                        </div>
+                    </div>
+                </button>
             
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-1.webp" alt="Holiday Booking Platform" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>Holiday Booking Platform</h4></div></div>
-            
-        
-            
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-2.webp" alt="E-commerce Storefront" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>E-commerce Storefront</h4></div></div>
-            
-        
-            
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-3.webp" alt="Admin Dashboard" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>Admin Dashboard</h4></div></div>
-            
-        
-            
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-4.webp" alt="Mobile App UI" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>Mobile App UI</h4></div></div>
-            
-        
-            
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-5.webp" alt="Native Android App" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>Native Android App</h4></div></div>
-            
-        
-            
-            
-                <div class="portfolio-item"><img src="assets/images/portfolio/project-6.webp" alt="Backend API" loading="lazy" decoding="async" width="800" height="600"><div class="portfolio-overlay"><h4>Backend API</h4></div></div>
-            
+        </div>
+
+                    <div class="portfolio-dots" data-portfolio-dots aria-hidden="true"></div>
         
     </div>
 
 </section>
+
+<dialog class="portfolio-lightbox" data-portfolio-lightbox aria-label="Project preview">
+    <div class="portfolio-lightbox__panel">
+        <button type="button" class="portfolio-lightbox__close" data-lightbox-close aria-label="Close preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <button type="button" class="portfolio-lightbox__nav portfolio-lightbox__nav--prev" data-lightbox-prev aria-label="Previous project">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <figure class="portfolio-lightbox__figure">
+            <img src="" alt="" data-lightbox-image>
+            <figcaption class="portfolio-lightbox__caption">
+                <div class="portfolio-lightbox__copy">
+                    <h3 data-lightbox-title></h3>
+                    <p data-lightbox-desc></p>
+                </div>
+                <a
+                    class="portfolio-lightbox__link"
+                    data-lightbox-link
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden>
+                    Visit project
+                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+            </figcaption>
+        </figure>
+
+        <button type="button" class="portfolio-lightbox__nav portfolio-lightbox__nav--next" data-lightbox-next aria-label="Next project">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</dialog>
+
+<script type="application/json" id="portfolio-lightbox-data">
+[{"title":"Wealthio","desc":"Personal financial intelligence platform — historical simulator, goals dashboard, and live Iranian market data.","image":"assets/images/portfolio/project-wealthio.webp","url":"https://wealthio.ir"},{"title":"UCAR","desc":"Car marketplace and services app — browse listings, book trusted auto services, and manage offers in one place.","image":"assets/images/portfolio/project-1.webp","url":null},{"title":"MediCare","desc":"Pharmacy and healthcare app with product browsing, lab tests, and a clean mobile-first shopping flow.","image":"assets/images/portfolio/project-2.webp","url":null},{"title":"Taskly","desc":"Task management app for organizing work, collaborating with teammates, and staying on schedule.","image":"assets/images/portfolio/project-3.webp","url":null},{"title":"IRIC Smart Home","desc":"Smart home control dashboard for rooms, devices, live camera, and climate — designed for tablet.","image":"assets/images/portfolio/project-4.webp","url":null},{"title":"Recipe Finder","desc":"Recipe discovery app with smart search, trending dishes, and an easy cook-friendly browsing experience.","image":"assets/images/portfolio/project-5.webp","url":null},{"title":"Travel Booking Platform","desc":"Full travel booking experience with destination search, filters, packages, and a seamless book flow.","image":"assets/images/portfolio/project-6.webp","url":null}]</script>
     <section id="contact" class="contact-section">
 
     <div class="contact-wrapper">

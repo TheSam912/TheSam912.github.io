@@ -22,6 +22,9 @@
         initMagneticButtons();
         initServiceCardTilt();
         initCustomCursor();
+        initExperienceAccordion();
+        initPortfolioCarousel();
+        initPortfolioLightbox();
     });
 
     // ===========================
@@ -579,6 +582,268 @@
 
         document.addEventListener("mouseenter", () => {
             document.body.classList.add("cursor-ready");
+        });
+    }
+
+    // ===========================
+    //  EXPERIENCE ACCORDION (mobile)
+    // ===========================
+
+    function initExperienceAccordion() {
+        const mq = window.matchMedia("(max-width: 768px)");
+        const cards = document.querySelectorAll(".exp-card--collapsible");
+
+        if (!cards.length) return;
+
+        const setExpanded = (card, open) => {
+            card.classList.toggle("is-open", open);
+            const header = card.querySelector(".exp-card__header--toggle");
+            header?.setAttribute("aria-expanded", open ? "true" : "false");
+        };
+
+        const onActivate = (card) => {
+            if (!mq.matches) return;
+
+            const willOpen = !card.classList.contains("is-open");
+
+            cards.forEach((other) => setExpanded(other, false));
+            if (willOpen) setExpanded(card, true);
+        };
+
+        cards.forEach((card) => {
+            const header = card.querySelector(".exp-card__header--toggle");
+            if (!header) return;
+
+            header.addEventListener("click", () => onActivate(card));
+            header.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onActivate(card);
+                }
+            });
+        });
+
+        const syncViewport = () => {
+            cards.forEach((card) => {
+                if (!mq.matches) {
+                    setExpanded(card, true);
+                    return;
+                }
+                setExpanded(card, card.classList.contains("exp-card--current"));
+            });
+        };
+
+        syncViewport();
+
+        if (mq.addEventListener) mq.addEventListener("change", syncViewport);
+        else mq.addListener(syncViewport);
+    }
+
+    // ===========================
+    //  PORTFOLIO CAROUSEL (mobile)
+    // ===========================
+
+    function initPortfolioCarousel() {
+        const root = document.querySelector("[data-portfolio-carousel]");
+        if (!root) return;
+
+        const track = root.querySelector(".portfolio-grid");
+        const dotsWrap = root.querySelector("[data-portfolio-dots]");
+        const slides = [...root.querySelectorAll("[data-portfolio-slide]")];
+        const mq = window.matchMedia("(max-width: 768px)");
+
+        if (!track || slides.length < 2) return;
+
+        let dots = [];
+        let active = 0;
+
+        const buildDots = () => {
+            if (!dotsWrap) return;
+            dotsWrap.innerHTML = "";
+            dots = slides.map((_, i) => {
+                const btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "portfolio-dot" + (i === 0 ? " is-active" : "");
+                btn.setAttribute("aria-label", `Go to project ${i + 1}`);
+                btn.addEventListener("click", () => {
+                    slides[i].scrollIntoView({
+                        behavior: reduced ? "auto" : "smooth",
+                        inline: "center",
+                        block: "nearest",
+                    });
+                });
+                dotsWrap.appendChild(btn);
+                return btn;
+            });
+        };
+
+        const setActive = (index) => {
+            if (index === active) return;
+            active = index;
+            dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("is-active-slide", i === index);
+            });
+        };
+
+        const syncFromScroll = () => {
+            if (!mq.matches) return;
+            const center = track.scrollLeft + track.clientWidth / 2;
+            let best = 0;
+            let bestDist = Infinity;
+            slides.forEach((slide, i) => {
+                const mid = slide.offsetLeft + slide.offsetWidth / 2;
+                const dist = Math.abs(mid - center);
+                if (dist < bestDist) {
+                    bestDist = dist;
+                    best = i;
+                }
+            });
+            setActive(best);
+        };
+
+        let ticking = false;
+        track.addEventListener("scroll", () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                syncFromScroll();
+                ticking = false;
+            });
+        }, { passive: true });
+
+        buildDots();
+        slides[0]?.classList.add("is-active-slide");
+
+        const onBreakpoint = () => {
+            if (!mq.matches) {
+                track.scrollLeft = 0;
+                setActive(0);
+            } else {
+                syncFromScroll();
+            }
+        };
+
+        if (mq.addEventListener) mq.addEventListener("change", onBreakpoint);
+        else mq.addListener(onBreakpoint);
+    }
+
+    // ===========================
+    //  PORTFOLIO LIGHTBOX
+    // ===========================
+
+    function initPortfolioLightbox() {
+        const dialog = document.querySelector("[data-portfolio-lightbox]");
+        const dataEl = document.getElementById("portfolio-lightbox-data");
+        const slides = [...document.querySelectorAll("[data-portfolio-slide]")];
+
+        if (!dialog || !dataEl || !slides.length) return;
+
+        let items = [];
+        try {
+            items = JSON.parse(dataEl.textContent || "[]");
+        } catch (_) {
+            return;
+        }
+
+        if (!items.length) return;
+
+        const img = dialog.querySelector("[data-lightbox-image]");
+        const title = dialog.querySelector("[data-lightbox-title]");
+        const desc = dialog.querySelector("[data-lightbox-desc]");
+        const link = dialog.querySelector("[data-lightbox-link]");
+        const btnClose = dialog.querySelector("[data-lightbox-close]");
+        const btnPrev = dialog.querySelector("[data-lightbox-prev]");
+        const btnNext = dialog.querySelector("[data-lightbox-next]");
+
+        let index = 0;
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let moved = false;
+
+        const render = (i) => {
+            index = (i + items.length) % items.length;
+            const item = items[index];
+            if (!item || !img || !title) return;
+
+            img.src = item.image;
+            img.alt = item.title || "";
+            title.textContent = item.title || "";
+            if (desc) {
+                const text = (item.desc || "").trim();
+                desc.textContent = text;
+                desc.hidden = !text;
+            }
+
+            if (link) {
+                if (item.url) {
+                    link.href = item.url;
+                    link.hidden = false;
+                } else {
+                    link.removeAttribute("href");
+                    link.hidden = true;
+                }
+            }
+
+            const showNav = items.length > 1;
+            btnPrev?.toggleAttribute("hidden", !showNav);
+            btnNext?.toggleAttribute("hidden", !showNav);
+        };
+
+        const open = (i) => {
+            render(i);
+            if (typeof dialog.showModal === "function") dialog.showModal();
+            else dialog.setAttribute("open", "");
+            document.body.style.overflow = "hidden";
+        };
+
+        const close = () => {
+            if (typeof dialog.close === "function") dialog.close();
+            else dialog.removeAttribute("open");
+            document.body.style.overflow = "";
+        };
+
+        slides.forEach((slide) => {
+            slide.addEventListener("pointerdown", (e) => {
+                touchStartX = e.clientX;
+                touchStartY = e.clientY;
+                moved = false;
+            });
+
+            slide.addEventListener("pointermove", (e) => {
+                if (
+                    Math.abs(e.clientX - touchStartX) > 10 ||
+                    Math.abs(e.clientY - touchStartY) > 10
+                ) {
+                    moved = true;
+                }
+            });
+
+            slide.addEventListener("click", () => {
+                if (moved) return;
+                const i = Number(slide.getAttribute("data-lightbox-index") || "0");
+                open(i);
+            });
+        });
+
+        btnClose?.addEventListener("click", close);
+        btnPrev?.addEventListener("click", () => render(index - 1));
+        btnNext?.addEventListener("click", () => render(index + 1));
+
+        dialog.addEventListener("click", (e) => {
+            if (e.target === dialog) close();
+        });
+
+        dialog.addEventListener("cancel", (e) => {
+            e.preventDefault();
+            close();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (!dialog.open) return;
+            if (e.key === "ArrowLeft") render(index - 1);
+            if (e.key === "ArrowRight") render(index + 1);
+            if (e.key === "Escape") close();
         });
     }
 })();

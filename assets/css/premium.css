@@ -624,6 +624,87 @@ body::before {
 }
 
 /* =====================================================
+   EDUCATION
+===================================================== */
+
+.education-section {
+    margin-top: 90px;
+    padding: 0 var(--section-inline, 5%);
+}
+
+.education-head {
+    margin-bottom: 28px;
+    max-width: 40rem;
+}
+
+.education-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 3.4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    color: #fff;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.education-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+    padding: 22px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(165deg, rgba(14, 22, 30, 0.96), rgba(5, 9, 14, 0.98));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.education-card__icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    color: #34D399;
+    background: rgba(52, 211, 153, 0.12);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.education-card__dates {
+    margin: 0 0 6px;
+    color: #6EE7B7;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.education-card__body h3 {
+    margin: 0 0 6px;
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    color: #F8FAFC;
+}
+
+.education-card__body p:last-child {
+    margin: 0;
+    color: #94A3B8;
+    line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
    LIVE PROJECTS — CLEAR SHOWCASE LIST
 ===================================================== */
 

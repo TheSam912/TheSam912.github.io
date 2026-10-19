@@ -390,6 +390,11 @@ body::before {
     gap: 18px;
 }
 
+.skills-panel[data-key],
+.skills-board .skills-panel:nth-child(5) {
+    grid-column: 1 / -1;
+}
+
 .skills-panel {
     position: relative;
     overflow: hidden;
@@ -508,11 +513,26 @@ body::before {
     background: rgba(52, 211, 153, 0.07);
 }
 
-.skill-chip img {
+.skill-chip img,
+.skill-chip__fa {
     width: 26px;
     height: 26px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.skill-chip__fa {
+    display: inline-grid;
+    place-items: center;
+    border-radius: 8px;
+    background: rgba(52, 211, 153, 0.1);
+    border: 1px solid rgba(52, 211, 153, 0.16);
+    color: #34D399;
+    font-size: 12px;
+}
+
+.skills-board .skills-panel:nth-child(5) .skills-panel__grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .skill-chip span {
@@ -527,12 +547,19 @@ body::before {
     color: #ECFDF5;
 }
 
+@media (max-width: 1100px) {
+    .skills-board .skills-panel:nth-child(5) .skills-panel__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 980px) {
     .skills-board {
         grid-template-columns: 1fr;
     }
 
-    .skills-panel__grid {
+    .skills-panel__grid,
+    .skills-board .skills-panel:nth-child(5) .skills-panel__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -542,7 +569,8 @@ body::before {
         padding: 18px;
     }
 
-    .skills-panel__grid {
+    .skills-panel__grid,
+    .skills-board .skills-panel:nth-child(5) .skills-panel__grid {
         grid-template-columns: 1fr;
     }
 }

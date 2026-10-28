@@ -56,15 +56,16 @@ body::before {
 .portfolio-title,
 .contact-title {
     font-family: var(--font-display);
-    letter-spacing: -0.035em;
-    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-weight: 600;
 }
 
 .hero-title {
-    font-size: clamp(2.35rem, 4.6vw, 3.65rem);
-    line-height: 1.12;
-    font-weight: 800;
-    max-width: 14ch;
+    font-size: clamp(1.85rem, 3.4vw, 2.65rem);
+    line-height: 1.22;
+    font-weight: 500;
+    max-width: 18ch;
+    color: rgba(248, 250, 252, 0.88);
 }
 
 .hero-description {
@@ -78,17 +79,19 @@ body::before {
     background-image: linear-gradient(
         100deg,
         #34D399 0%,
-        #6EE7B7 22%,
-        #F0FDF4 42%,
-        #D4AF37 58%,
-        #34D399 78%,
-        #10B981 100%
+        #6EE7B7 40%,
+        #A7F3D0 100%
     );
-    background-size: 240% 100%;
+    background-size: 100% 100%;
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
             color: transparent;
+    font-weight: 600;
+}
+
+.hero-title .gradient-text {
+    font-weight: 500;
 }
 
 /* =====================================================

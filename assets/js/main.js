@@ -72,7 +72,7 @@
         });
 
         // Close drawer if viewport grows past the mobile-nav breakpoint
-        const mq = window.matchMedia("(min-width: 1151px)");
+        const mq = window.matchMedia("(min-width: 993px)");
         const onBreakpoint = (e) => { if (e.matches) close(); };
         if (mq.addEventListener) mq.addEventListener("change", onBreakpoint);
         else mq.addListener(onBreakpoint);
@@ -289,6 +289,14 @@
     //  SMOOTH ANCHOR SCROLL  (nav links only)
     // ===========================
 
+    function navOffsetPx() {
+        const raw = getComputedStyle(document.documentElement)
+            .getPropertyValue("--nav-offset")
+            .trim();
+        const parsed = parseFloat(raw);
+        return Number.isFinite(parsed) ? parsed : 100;
+    }
+
     function initSmoothAnchors() {
 
         document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -300,7 +308,11 @@
                 if (!target) return;
 
                 event.preventDefault();
-                target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+                // scroll-margin-top on sections handles sticky nav clearance
+                target.scrollIntoView({
+                    behavior: reduced ? "auto" : "smooth",
+                    block: "start",
+                });
                 history.replaceState(null, "", `#${id}`);
             });
         });
@@ -445,32 +457,83 @@
 
     function initActiveNavHighlight() {
 
-        const links = document.querySelectorAll(".nav-links a[href^='#']");
-        if (!links.length || !("IntersectionObserver" in window)) return;
+        const desktopLinks = Array.from(
+            document.querySelectorAll(".nav-links a[href^='#']")
+        );
+        const mobileLinks = Array.from(
+            document.querySelectorAll(".mobile-menu__nav a[href^='#']")
+        );
+        const links = [...desktopLinks, ...mobileLinks];
+        if (!links.length) return;
 
-        const map = new Map();
+        /** @type {{ id: string, el: HTMLElement }[]} */
+        const sections = [];
+        const seen = new Set();
 
-        links.forEach((link) => {
-            const id = link.getAttribute("href").slice(1);
-            const section = document.getElementById(id);
-            if (section) map.set(section, link);
+        desktopLinks.forEach((link) => {
+            const id = (link.getAttribute("href") || "").slice(1);
+            if (!id || seen.has(id)) return;
+            const el = document.getElementById(id);
+            if (!el) return;
+            seen.add(id);
+            sections.push({ id, el });
         });
 
-        if (!map.size) return;
+        if (!sections.length) return;
 
-        const io = new IntersectionObserver(
-            (entries) => {
-                for (const entry of entries) {
-                    if (entry.isIntersecting) {
-                        links.forEach((l) => l.classList.remove("active"));
-                        map.get(entry.target)?.classList.add("active");
-                    }
+        let ticking = false;
+
+        const setActive = (id) => {
+            links.forEach((link) => {
+                const href = link.getAttribute("href") || "";
+                link.classList.toggle("active", href === `#${id}`);
+            });
+        };
+
+        const update = () => {
+            ticking = false;
+            const marker = navOffsetPx() + 12;
+            let current = sections[0].id;
+
+            for (const { id, el } of sections) {
+                const top = el.getBoundingClientRect().top;
+                if (top - marker <= 0) {
+                    current = id;
+                } else {
+                    break;
+                }
+            }
+
+            // Near page bottom: force last section (Contact) active
+            const doc = document.documentElement;
+            const atBottom =
+                window.innerHeight + window.scrollY >= doc.scrollHeight - 48;
+            if (atBottom) {
+                current = sections[sections.length - 1].id;
+            }
+
+            setActive(current);
+        };
+
+        window.addEventListener(
+            "scroll",
+            () => {
+                if (!ticking) {
+                    requestAnimationFrame(update);
+                    ticking = true;
                 }
             },
-            { threshold: 0.45, rootMargin: "-20% 0px -45% 0px" }
+            { passive: true }
         );
 
-        map.forEach((_, section) => io.observe(section));
+        window.addEventListener("resize", () => {
+            if (!ticking) {
+                requestAnimationFrame(update);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        update();
     }
 
     // ===========================

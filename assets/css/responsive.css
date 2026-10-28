@@ -1,6 +1,6 @@
 /* ===================================
    RESPONSIVE
-   Breakpoints: 1200 | 1150 | 992 | 768 | 576 | 400
+   Breakpoints: 1200 | 992 | 768 | 576 | 400
 =================================== */
 
 /* ===================================
@@ -17,8 +17,23 @@
         display: none;
     }
 
+    .nav-links {
+        gap: 2px;
+        padding: 3px;
+    }
+
     .nav-links a {
-        padding: 8px 11px;
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    .navbar {
+        gap: 12px;
+        max-width: none;
+    }
+
+    .talk-btn {
+        padding-inline: 14px;
         font-size: 12px;
     }
 
@@ -38,11 +53,12 @@
 
 
 /* ===================================
-   TABLET LANDSCAPE (≤1150px)
+   TABLET (≤992px)
    Mobile nav · stacked layouts
+   (Desktop ≥993px keeps full nav links)
 =================================== */
 
-@media (max-width: 1150px) {
+@media (max-width: 992px) {
 
     :root {
         --nav-gutter: clamp(1.25rem, 4.5vw, 2rem);

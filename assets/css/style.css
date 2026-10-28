@@ -77,6 +77,8 @@ html{
     scroll-behavior:auto;
 
     overflow-x:clip;
+
+    scroll-padding-top:var(--nav-offset);
 }
 
 body{
@@ -3048,6 +3050,18 @@ section{
     background:rgba(52,211,153,.07);
 
     transform:translateX(4px);
+}
+
+.mobile-menu__nav a.active{
+
+    color:#34D399;
+
+    background:rgba(52,211,153,.1);
+}
+
+.mobile-menu__nav a.active .mobile-menu__idx{
+
+    color:#34D399;
 }
 
 .mobile-menu__idx{

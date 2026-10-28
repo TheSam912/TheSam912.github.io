@@ -1032,7 +1032,7 @@ body::before {
    Loaded last so it wins over desktop luxuries.
 ===================================================== */
 
-@media (max-width: 1150px) {
+@media (max-width: 992px) {
     :root {
         --section-gap: 52px;
         --section-gap-sm: 36px;

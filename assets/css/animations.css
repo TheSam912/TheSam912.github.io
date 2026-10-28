@@ -222,7 +222,7 @@ body {
         backdrop-filter 600ms ease;
 }
 
-@media (min-width: 1151px) {
+@media (min-width: 993px) {
     .nav-shell {
         display: block;
         position: sticky;
@@ -240,7 +240,7 @@ body {
 }
 
 /* Re-assert fixed nav shell after animations.css (loaded last) */
-@media (max-width: 1150px) {
+@media (max-width: 992px) {
     .nav-shell {
         display: block;
         position: fixed;

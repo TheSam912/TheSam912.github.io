@@ -567,7 +567,7 @@
         font-size: 12px;
     }
 
-    .exp-card--collapsible.is-open .exp-card__body {
+    .exp-card__body {
         margin-top: 12px;
     }
 

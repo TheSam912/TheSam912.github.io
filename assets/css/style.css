@@ -1804,72 +1804,8 @@ body{
     gap:14px;
 }
 
-.exp-card__header--toggle{
-    cursor:pointer;
-    outline:none;
-    -webkit-tap-highlight-color:transparent;
-    user-select:none;
-}
-
-.exp-card__header--toggle:focus-visible{
-    border-radius:12px;
-    box-shadow:0 0 0 2px rgba(52,211,153,.35);
-}
-
-.exp-card__chevron{
-    display:grid;
-    width:28px;
-    height:28px;
-    border-radius:8px;
-    place-items:center;
-    color:rgba(52,211,153,.85);
-    background:rgba(52,211,153,.08);
-    border:1px solid rgba(52,211,153,.16);
-    flex-shrink:0;
-    margin-left:auto;
-    transition:transform .3s ease, background .3s ease;
-}
-
-.exp-card__meta:not(:has(.exp-card__tag)) .exp-card__chevron{
-    margin-left:auto;
-}
-
-.exp-card__chevron i{
-    font-size:11px;
-    transition:transform .3s ease;
-}
-
-.exp-card.is-open .exp-card__chevron i{
-    transform:rotate(180deg);
-}
-
-.exp-card.is-open .exp-card__chevron{
-    background:rgba(52,211,153,.14);
-}
-
-/* Collapsed by default on all viewports for uniform card sizes */
-.exp-card--collapsible .exp-card__body{
-    display:grid;
-    grid-template-rows:0fr;
-    transition:grid-template-rows .35s ease, margin-top .35s ease;
-    margin-top:0;
-}
-
-.exp-card--collapsible.is-open .exp-card__body{
-    grid-template-rows:1fr;
+.exp-card__body{
     margin-top:14px;
-}
-
-.exp-card__body-inner{
-    min-height:0;
-    overflow:hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .exp-card--collapsible .exp-card__body,
-    .exp-card__chevron i {
-        transition: none;
-    }
 }
 
 .exp-card:hover{
@@ -1970,15 +1906,6 @@ body{
     background:#94A3B8;
 
     box-shadow:none;
-}
-
-.exp-card--gap .exp-card__chevron{
-
-    color:rgba(148,163,184,.85);
-
-    background:rgba(148,163,184,.08);
-
-    border-color:rgba(148,163,184,.18);
 }
 
 .exp-card__meta{

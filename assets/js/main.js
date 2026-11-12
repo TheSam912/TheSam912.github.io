@@ -21,7 +21,6 @@
         initActiveNavHighlight();
         // Skip expensive pointer effects — they cost perpetual rAF / mousemove work
         // and don't help perceived load speed on a content-heavy page.
-        initExperienceAccordion();
         initPortfolioCarousel();
         initPortfolioLightbox();
     });
@@ -644,44 +643,6 @@
 
         document.addEventListener("mouseenter", () => {
             document.body.classList.add("cursor-ready");
-        });
-    }
-
-    // ===========================
-    //  EXPERIENCE ACCORDION (mobile)
-    // ===========================
-
-    function initExperienceAccordion() {
-        const cards = document.querySelectorAll(".exp-card--collapsible");
-
-        if (!cards.length) return;
-
-        const setExpanded = (card, open) => {
-            card.classList.toggle("is-open", open);
-            const header = card.querySelector(".exp-card__header--toggle");
-            header?.setAttribute("aria-expanded", open ? "true" : "false");
-        };
-
-        const onActivate = (card) => {
-            const willOpen = !card.classList.contains("is-open");
-            cards.forEach((other) => setExpanded(other, false));
-            if (willOpen) setExpanded(card, true);
-        };
-
-        cards.forEach((card) => {
-            const header = card.querySelector(".exp-card__header--toggle");
-            if (!header) return;
-
-            header.addEventListener("click", () => onActivate(card));
-            header.addEventListener("keydown", (e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    onActivate(card);
-                }
-            });
-
-            // Keep a consistent first paint: only current role starts open
-            setExpanded(card, card.classList.contains("exp-card--current"));
         });
     }
 

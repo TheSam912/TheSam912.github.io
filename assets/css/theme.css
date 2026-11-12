@@ -1,0 +1,143 @@
+/* =====================================================
+   THEME — dark only
+===================================================== */
+
+:root,
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #000203;
+    --bg-elevated: #070b10;
+    --surface: #0B1117;
+    --surface-2: #101822;
+    --surface-border: rgba(52, 211, 153, 0.12);
+    --primary: #34D399;
+    --primary-strong: #10B981;
+    --primary-soft: rgba(52, 211, 153, 0.12);
+    --text: #F8FAFC;
+    --text-soft: rgba(248, 250, 252, 0.72);
+    --muted: #94A3B8;
+    --nav-bg-top: rgba(12, 18, 24, 0.82);
+    --nav-bg-bottom: rgba(4, 8, 12, 0.90);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --card-bg-top: rgba(14, 22, 30, 0.96);
+    --card-bg-bottom: rgba(5, 9, 14, 0.98);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+    --chip-bg: rgba(52, 211, 153, 0.08);
+    --chip-border: rgba(52, 211, 153, 0.18);
+    --overlay-scrim: rgba(2, 6, 9, 0.72);
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---- Compact navbar -------------------------------- */
+
+.navbar {
+    max-width: 1120px;
+    padding: 8px 10px 8px 14px;
+    gap: 12px;
+    background: linear-gradient(165deg, var(--nav-bg-top), var(--nav-bg-bottom)) !important;
+    border: 1px solid var(--nav-border) !important;
+    box-shadow: var(--shadow);
+}
+
+.logo img {
+    height: 36px;
+}
+
+.nav-links {
+    gap: 2px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-links a {
+    font-size: 12.5px;
+    padding: 7px 10px;
+    color: var(--text-soft);
+}
+
+.nav-links a:hover {
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-links a.active {
+    color: #04110D;
+    background: var(--primary);
+}
+
+.nav-actions {
+    gap: 8px;
+}
+
+.nav-status {
+    padding: 7px 10px;
+    font-size: 11.5px;
+    color: var(--text-soft);
+    background: var(--chip-bg);
+    border: 1px solid var(--chip-border);
+}
+
+.talk-btn {
+    padding: 9px 12px;
+    font-size: 12.5px;
+    gap: 8px;
+}
+
+.mobile-menu__tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.mobile-menu__head {
+    gap: 12px;
+}
+
+/* Mid desktop: keep header from overflowing */
+@media (max-width: 1180px) {
+    .nav-status__text {
+        display: none;
+    }
+
+    .nav-status {
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .nav-links a {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    /* Prefer compact CTA over truncated text */
+    .talk-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        gap: 7px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .nav-status:not(.nav-status--menu),
+    .talk-btn {
+        display: none !important;
+    }
+
+    .nav-links a {
+        padding: 7px 9px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-actions {
+        gap: 8px;
+        margin-left: auto;
+    }
+}

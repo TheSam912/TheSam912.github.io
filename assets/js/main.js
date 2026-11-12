@@ -19,9 +19,8 @@
         initStatsCounters();
         initNavbarScrollState();
         initActiveNavHighlight();
-        initMagneticButtons();
-        initServiceCardTilt();
-        initCustomCursor();
+        // Skip expensive pointer effects — they cost perpetual rAF / mousemove work
+        // and don't help perceived load speed on a content-heavy page.
         initExperienceAccordion();
         initPortfolioCarousel();
         initPortfolioLightbox();
@@ -653,7 +652,6 @@
     // ===========================
 
     function initExperienceAccordion() {
-        const mq = window.matchMedia("(max-width: 768px)");
         const cards = document.querySelectorAll(".exp-card--collapsible");
 
         if (!cards.length) return;
@@ -665,10 +663,7 @@
         };
 
         const onActivate = (card) => {
-            if (!mq.matches) return;
-
             const willOpen = !card.classList.contains("is-open");
-
             cards.forEach((other) => setExpanded(other, false));
             if (willOpen) setExpanded(card, true);
         };
@@ -684,22 +679,10 @@
                     onActivate(card);
                 }
             });
+
+            // Keep a consistent first paint: only current role starts open
+            setExpanded(card, card.classList.contains("exp-card--current"));
         });
-
-        const syncViewport = () => {
-            cards.forEach((card) => {
-                if (!mq.matches) {
-                    setExpanded(card, true);
-                    return;
-                }
-                setExpanded(card, card.classList.contains("exp-card--current"));
-            });
-        };
-
-        syncViewport();
-
-        if (mq.addEventListener) mq.addEventListener("change", syncViewport);
-        else mq.addListener(syncViewport);
     }
 
     // ===========================
@@ -814,7 +797,9 @@
         const img = dialog.querySelector("[data-lightbox-image]");
         const title = dialog.querySelector("[data-lightbox-title]");
         const desc = dialog.querySelector("[data-lightbox-desc]");
+        const formatsEl = dialog.querySelector("[data-lightbox-formats]");
         const link = dialog.querySelector("[data-lightbox-link]");
+        const storeLink = dialog.querySelector("[data-lightbox-store]");
         const btnClose = dialog.querySelector("[data-lightbox-close]");
         const btnPrev = dialog.querySelector("[data-lightbox-prev]");
         const btnNext = dialog.querySelector("[data-lightbox-next]");
@@ -823,6 +808,40 @@
         let touchStartX = 0;
         let touchStartY = 0;
         let moved = false;
+
+        const setLink = (el, url) => {
+            if (!el) return;
+            if (url) {
+                el.href = url;
+                el.hidden = false;
+            } else {
+                el.removeAttribute("href");
+                el.hidden = true;
+            }
+        };
+
+        const formatClass = (format) => {
+            const f = String(format || "").toLowerCase();
+            return f.includes("website") ? "portfolio-format--web" : "portfolio-format--app";
+        };
+
+        const renderFormats = (formats) => {
+            if (!formatsEl) return;
+            const list = Array.isArray(formats) ? formats.filter(Boolean) : [];
+            if (!list.length) {
+                formatsEl.innerHTML = "";
+                formatsEl.hidden = true;
+                return;
+            }
+
+            formatsEl.innerHTML = list
+                .map((format) => {
+                    const label = String(format);
+                    return `<span class="portfolio-format ${formatClass(label)}">${label}</span>`;
+                })
+                .join("");
+            formatsEl.hidden = false;
+        };
 
         const render = (i) => {
             index = (i + items.length) % items.length;
@@ -838,15 +857,9 @@
                 desc.hidden = !text;
             }
 
-            if (link) {
-                if (item.url) {
-                    link.href = item.url;
-                    link.hidden = false;
-                } else {
-                    link.removeAttribute("href");
-                    link.hidden = true;
-                }
-            }
+            renderFormats(item.formats);
+            setLink(link, item.url || null);
+            setLink(storeLink, item.storeUrl || null);
 
             const showNav = items.length > 1;
             btnPrev?.toggleAttribute("hidden", !showNav);

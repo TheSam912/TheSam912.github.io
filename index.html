@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Sobhan Daroogheh — Software &amp; Website Developer · SEO &amp; GEO Specialist</title>
-    <meta name="description" content="Software &amp; Website Developer with 8+ years of experience turning product requirements into responsive, high-performance web and mobile applications (Flutter, Laravel, Vue.js, Node.js).">
+    <meta name="description" content="8+ years shipping high-performance web and mobile products — Flutter, Laravel, Vue.js, Node.js — with hands-on SEO &amp; GEO so every launch ranks in search and surfaces in AI answer engines.">
 
+    <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="assets/vendor/fontawesome/webfonts/fa-solid-900.subset.woff2">
+
+    <!-- Slim local icon subset (~10KB) instead of full Font Awesome CDN -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/icons.subset.css?v=20261112y">
+
+    <!-- Fewer Google Font weights; async so they don't block first paint -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Syne:wght@600;700&display=swap"
+        media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&family=Syne:wght@600;700&display=swap">
+    </noscript>
 
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=20261020">
-    <link rel="stylesheet" href="assets/css/responsive.css?v=20261020">
-    <link rel="stylesheet" href="assets/css/animations.css?v=20261020">
-    <link rel="stylesheet" href="assets/css/premium.css?v=20261020r">
-    <script defer src="assets/js/main.js?v=20261020"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=20261112y">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=20261112y">
+    <link
+        rel="stylesheet"
+        href="assets/css/animations.css?v=20261112y"
+        media="print"
+        onload="this.media='all'">
+    <link
+        rel="stylesheet"
+        href="assets/css/premium.css?v=20261112y"
+        media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/theme.css?v=20261112y">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/animations.css?v=20261112y">
+        <link rel="stylesheet" href="assets/css/premium.css?v=20261112y">
+    </noscript>
+
+    <script defer src="assets/js/main.js?v=20261112y"></script>
 </head>
 
 <body>
@@ -43,23 +70,13 @@
                 </li>
                             <li>
                     <a
-                        href="#services"
-                                            >Services</a>
-                </li>
-                            <li>
-                    <a
                         href="#skills"
                                             >Skills</a>
                 </li>
                             <li>
                     <a
                         href="#experience"
-                                            >Experience</a>
-                </li>
-                            <li>
-                    <a
-                        href="#education"
-                                            >Education</a>
+                                            >Work</a>
                 </li>
                             <li>
                     <a
@@ -84,7 +101,7 @@
                 <span class="nav-status__text">Available</span>
             </span>
 
-            <a href="#contact" class="talk-btn" data-magnetic>
+            <a href="#contact" class="talk-btn">
                 <span>Get In Touch</span>
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
@@ -108,9 +125,11 @@
                 Available
             </span>
         </div>
-        <button class="menu-close" type="button" aria-label="Close menu">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
+        <div class="mobile-menu__tools">
+            <button class="menu-close" type="button" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
     </div>
 
     <nav class="mobile-menu__nav" aria-label="Mobile">
@@ -122,32 +141,24 @@
                 <span class="mobile-menu__idx">02</span>
                 <span class="mobile-menu__label">About</span>
             </a>
-                    <a href="#services">
-                <span class="mobile-menu__idx">03</span>
-                <span class="mobile-menu__label">Services</span>
-            </a>
                     <a href="#skills">
-                <span class="mobile-menu__idx">04</span>
+                <span class="mobile-menu__idx">03</span>
                 <span class="mobile-menu__label">Skills</span>
             </a>
                     <a href="#experience">
-                <span class="mobile-menu__idx">05</span>
-                <span class="mobile-menu__label">Experience</span>
-            </a>
-                    <a href="#education">
-                <span class="mobile-menu__idx">06</span>
-                <span class="mobile-menu__label">Education</span>
+                <span class="mobile-menu__idx">04</span>
+                <span class="mobile-menu__label">Work</span>
             </a>
                     <a href="#live">
-                <span class="mobile-menu__idx">07</span>
+                <span class="mobile-menu__idx">05</span>
                 <span class="mobile-menu__label">Live</span>
             </a>
                     <a href="#portfolio">
-                <span class="mobile-menu__idx">08</span>
+                <span class="mobile-menu__idx">06</span>
                 <span class="mobile-menu__label">Projects</span>
             </a>
                     <a href="#contact">
-                <span class="mobile-menu__idx">09</span>
+                <span class="mobile-menu__idx">07</span>
                 <span class="mobile-menu__label">Contact</span>
             </a>
             </nav>
@@ -168,41 +179,37 @@
             Software &amp; Website Developer · SEO &amp; GEO Specialist        </div>
 
         <h1 class="hero-title" data-reveal="up" data-reveal-delay="80">
-            Software &amp; Website            <br>
-            <span class="gradient-text">Developer</span>
+            Build products that            <br>
+            <span class="gradient-text">perform</span>
             <br>
-            SEO &amp; GEO Specialist        </h1>
+            and get discovered.        </h1>
 
         <p class="hero-description" data-reveal="up" data-reveal-delay="180">
-            Software &amp; Website Developer with 8+ years of experience turning product requirements into responsive, high-performance web and mobile applications (Flutter, Laravel, Vue.js, Node.js).        </p>
+            8+ years shipping high-performance web and mobile products — Flutter, Laravel, Vue.js, Node.js — with hands-on SEO &amp; GEO so every launch ranks in search and surfaces in AI answer engines.        </p>
 
         <div class="hero-meta" data-reveal="up" data-reveal-delay="220">
             <span class="hero-meta__chip">
                 <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                8+ Years Experience
-            </span>
+                8+ Years Shipping            </span>
             <span class="hero-meta__chip">
                 <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-                45% Peak Engagement Uplift
-            </span>
+                45% Peak Engagement            </span>
             <span class="hero-meta__chip">
                 <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-                15+ Apps &amp; Platforms
-            </span>
+                15+ Apps &amp; Platforms            </span>
             <span class="hero-meta__chip">
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                SEO/GEO Search &amp; AI Visibility
-            </span>
+                SEO + GEO for Search &amp; AI            </span>
         </div>
 
         <div class="hero-buttons" data-reveal="up" data-reveal-delay="280">
             <a href="#live" class="hero-btn-primary" data-magnetic>
-                <span>View Live Work</span>
+                <span>Explore Live Work</span>
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="assets/files/Sobhan-Resume.pdf" class="hero-btn-secondary" download>
                 <i class="fa-solid fa-download" aria-hidden="true"></i>
-                <span>Download CV</span>
+                <span>Download Resume</span>
             </a>
         </div>
 
@@ -211,7 +218,7 @@
     <div class="hero-right" data-reveal="scale" data-reveal-delay="200">
         <img
             src="assets/images/hero.webp"
-            alt="Sobhan Daroogheh"
+            alt="Sobhan Daroogheh — Software & Website Developer"
             fetchpriority="high"
             decoding="async"
             width="600"
@@ -629,7 +636,7 @@
                             <div class="experience-stats">
                     <span class="experience-stats__pill">
                         <i class="fa-solid fa-briefcase"></i>
-                        10 roles
+                        9 roles
                     </span>
                     <span class="experience-stats__pill">
                         <i class="fa-solid fa-chart-line"></i>
@@ -668,7 +675,7 @@
                             </div>
                             <div class="exp-card__info">
                                 <h3>Mobile Application Developer (Android &amp; iOS)</h3>
-                                <p>Fanavaran</p>
+                                <p>Fanavaran &amp; OpCollege</p>
                             </div>
                         </div>
                     </div>
@@ -676,10 +683,11 @@
                                             <div class="exp-card__body" id="exp-body-1">
                             <div class="exp-card__body-inner">
                                                                     <ul class="exp-card__list">
-                                                                                    <li>Rebuilding the company&#039;s Android and iOS app from the ground up with React Native, collaborating with the IT team to improve the existing product.</li>
+                                                                                    <li>Working concurrently across Fanavaran and OpCollege — one organization with separate website and mobile products.</li>
+                                                                                    <li>Rebuilding the Android and iOS app from the ground up with React Native, collaborating with the IT team to improve the existing product.</li>
                                                                                     <li>Developed a dedicated CLI to manage the application project and support development workflows.</li>
                                                                                     <li>Published the Android and iOS apps on Google Play and the App Store (React Native rebuild).</li>
-                                                                                    <li>Contribute to website and backend development alongside primary mobile application responsibilities.</li>
+                                                                                    <li>Contribute to website and backend development for both Fanavaran and OpCollege alongside primary mobile responsibilities.</li>
                                                                             </ul>
                                 
                                                                     <div class="exp-card__live">
@@ -695,23 +703,30 @@
                                                         class="exp-card__live-link">
                                                         Fanavaran                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                                                                                                                                                                                        <a
-                                                            href="https://apps.apple.com/us/app/fanavaran/id6813155894"
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            class="exp-card__live-link exp-card__live-link--store">
-                                                            App Store
-                                                            <i class="fa-brands fa-apple" aria-hidden="true"></i>
-                                                        </a>
-                                                                                                                                                                <a
-                                                            href="https://play.google.com/store/apps/details?id=com.fanavaran.app&amp;hl=en"
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            class="exp-card__live-link exp-card__live-link--store">
-                                                            Play Store
-                                                            <i class="fa-brands fa-google-play" aria-hidden="true"></i>
-                                                        </a>
-                                                                                                                                                                                        </div>
+                                                                                                                                                                                                        <a
+                                                        href="https://opcollege.com/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="exp-card__live-link">
+                                                        OpCollege                                                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                                    </a>
+                                                                                                                                                    <a
+                                                        href="https://apps.apple.com/us/app/fanavaran/id6813155894"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="exp-card__live-link exp-card__live-link--store">
+                                                        App Store
+                                                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                                    </a>
+                                                                                                                                                    <a
+                                                        href="https://play.google.com/store/apps/details?id=com.fanavaran.app&amp;hl=en"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="exp-card__live-link exp-card__live-link--store">
+                                                        Play Store
+                                                        <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+                                                    </a>
+                                                                                                                                    </div>
                                     </div>
                                                             </div>
                         </div>
@@ -767,21 +782,21 @@
                                                         class="exp-card__live-link">
                                                         Onzyro                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                                                                                                                                <a
+                                                                                                                                                                                                                                                                                                                                                                                                <a
                                                         href="https://ecommerce-watch-five.vercel.app/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         class="exp-card__live-link">
                                                         Vesta                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                                                                                                                                <a
+                                                                                                                                                                                                                                                                                                                                                                                                <a
                                                         href="https://wealthio.ir/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         class="exp-card__live-link">
                                                         Wealthio                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                    </div>
                                     </div>
                                                             </div>
                         </div>
@@ -832,20 +847,20 @@
                                         </span>
                                         <div class="exp-card__live-links">
                                                                                                                                                                                                 <a
-                                                        href="https://www.destinology.co.uk/"
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        class="exp-card__live-link">
-                                                        Destinology.co.uk                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                                                    </a>
-                                                                                                                                                                                                                                                <a
                                                         href="https://www.corefinity.com/"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         class="exp-card__live-link">
                                                         Corefinity                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                <a
+                                                        href="https://www.destinology.co.uk/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="exp-card__live-link">
+                                                        Destinology.co.uk                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                                    </a>
+                                                                                                                                                                                                                                                                                    </div>
                                     </div>
                                                             </div>
                         </div>
@@ -901,7 +916,7 @@
                                                         class="exp-card__live-link">
                                                         WooCom Flutter E-Commerce                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                    </div>
                                     </div>
                                                             </div>
                         </div>
@@ -957,7 +972,15 @@
                                                         class="exp-card__live-link">
                                                         NIU Nature                                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                                                     </a>
-                                                                                                                                    </div>
+                                                                                                                                                                                                    <a
+                                                        href="https://apps.apple.com/de/app/niu-nature/id6450218644"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        class="exp-card__live-link exp-card__live-link--store">
+                                                        App Store
+                                                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                                    </a>
+                                                                                                                                                                                    </div>
                                     </div>
                                                             </div>
                         </div>
@@ -965,7 +988,7 @@
                 </article>
 
                             
-                <article class="exp-card exp-card--collapsible">
+                <article class="exp-card exp-card--gap exp-card--collapsible">
 
                     <div
                         class="exp-card__header exp-card__header--toggle"
@@ -977,6 +1000,7 @@
                         <div class="exp-card__meta">
                             <span class="exp-card__num">06</span>
                             <time class="exp-card__date">Oct 2019 — Sep 2022</time>
+                                                            <span class="exp-card__tag exp-card__tag--gap">Not employment</span>
                                                                                         <span class="exp-card__chevron" aria-hidden="true">
                                     <i class="fa-solid fa-chevron-down"></i>
                                 </span>
@@ -1127,47 +1151,6 @@
                     
                 </article>
 
-                            
-                <article class="exp-card exp-card--collapsible">
-
-                    <div
-                        class="exp-card__header exp-card__header--toggle"
-                                                    role="button"
-                            tabindex="0"
-                            aria-expanded="false"
-                            aria-controls="exp-body-10"
-                                            >
-                        <div class="exp-card__meta">
-                            <span class="exp-card__num">10</span>
-                            <time class="exp-card__date">Jun 2016 — Sep 2016</time>
-                                                                                        <span class="exp-card__chevron" aria-hidden="true">
-                                    <i class="fa-solid fa-chevron-down"></i>
-                                </span>
-                                                    </div>
-
-                        <div class="exp-card__main">
-                            <div class="exp-card__icon">
-                                <i class="fa-brands fa-android"></i>
-                            </div>
-                            <div class="exp-card__info">
-                                <h3>Android Developer (Internship)</h3>
-                                <p>Mana (Greenweb)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                                            <div class="exp-card__body" id="exp-body-10">
-                            <div class="exp-card__body-inner">
-                                                                    <ul class="exp-card__list">
-                                                                                    <li>Shipped a feature-rich Android app that drove a 10% increase in monthly sales within five months of launch.</li>
-                                                                                    <li>Sharpened go-to-market targeting through competitor research, lifting click-through rates 20% and conversions 15% in three months.</li>
-                                                                            </ul>
-                                
-                                                            </div>
-                        </div>
-                    
-                </article>
-
             
         </div>
 
@@ -1186,25 +1169,43 @@
         </h2>
     </div>
 
-    <div class="education-grid">
-                    <article class="education-card">
-                <div class="education-card__icon" aria-hidden="true">
-                    <i class="fa-solid fa-graduation-cap"></i>
+    <div class="education-grid" data-reveal-stagger data-reveal="fade">
+                    <article class="education-card education-card--master">
+                <div class="education-card__sheen" aria-hidden="true"></div>
+                <div class="education-card__top">
+                    <div class="education-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-card__meta">
+                        <span class="education-card__eyebrow">Graduate degree</span>
+                        <time class="education-card__dates">2022 — 2025</time>
+                    </div>
                 </div>
                 <div class="education-card__body">
-                    <p class="education-card__dates">2022 — 2025</p>
                     <h3>Master of Cybersecurity</h3>
-                    <p>University of Padua, Italy</p>
+                    <p class="education-card__school">University of Padua, Italy</p>
+                    <p class="education-card__location">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        Padua, Italy                    </p>
                 </div>
             </article>
-                    <article class="education-card">
-                <div class="education-card__icon" aria-hidden="true">
-                    <i class="fa-solid fa-building-columns"></i>
+                    <article class="education-card education-card--bachelor">
+                <div class="education-card__sheen" aria-hidden="true"></div>
+                <div class="education-card__top">
+                    <div class="education-card__icon" aria-hidden="true">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div class="education-card__meta">
+                        <span class="education-card__eyebrow">Undergraduate degree</span>
+                        <time class="education-card__dates">2016 — 2021</time>
+                    </div>
                 </div>
                 <div class="education-card__body">
-                    <p class="education-card__dates">2016 — 2021</p>
                     <h3>Bachelor of Computer Software Engineering</h3>
-                    <p>Sadjad University of Technology, Mashhad, Iran</p>
+                    <p class="education-card__school">Sadjad University of Technology, Mashhad, Iran</p>
+                    <p class="education-card__location">
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                        Mashhad, Iran                    </p>
                 </div>
             </article>
             </div>
@@ -1229,7 +1230,7 @@
 
         <div class="live-head__aside" aria-hidden="true">
             <div class="live-head__count">
-                <strong>9</strong>
+                <strong>8</strong>
                 <span>live products</span>
             </div>
             <div class="live-head__signal">
@@ -1263,16 +1264,18 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 ecommerce-shoes-swart.vercel.app                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://ecommerce-shoes-swart.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live demo</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://ecommerce-shoes-swart.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live demo</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
                                             <li class="live-row">
                     <div class="live-row__index" aria-hidden="true">02</div>
@@ -1297,19 +1300,57 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 ecommerce-watch-five.vercel.app                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://ecommerce-watch-five.vercel.app/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live demo</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://ecommerce-watch-five.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live demo</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
                                             <li class="live-row">
                     <div class="live-row__index" aria-hidden="true">03</div>
+
+                    <div class="live-row__main">
+                        <div class="live-row__badges">
+                            <span class="live-row__live">
+                                <span class="live-pulse" aria-hidden="true"></span>
+                                Live
+                            </span>
+                            <span class="live-row__type">Website</span>
+                                                            <span class="live-row__related">Corefinity (Destinology)</span>
+                                                    </div>
+
+                        <h3 class="live-row__name">Corefinity</h3>
+
+                                                    <p class="live-row__blurb">AI-native hosting platform — MCP server with 400+ tools for agents to manage infrastructure, clusters, and sites.</p>
+                        
+                        <div class="live-row__meta">
+                                                            <span>Laravel · Vue.js</span>
+                                                        <span class="live-row__host">
+                                <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                corefinity.com                            </span>
+                        </div>
+
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://www.corefinity.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live website</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
+                </li>
+                                            <li class="live-row">
+                    <div class="live-row__index" aria-hidden="true">04</div>
 
                     <div class="live-row__main">
                         <div class="live-row__badges">
@@ -1331,19 +1372,21 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 destinology.co.uk                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://www.destinology.co.uk/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live website</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://www.destinology.co.uk/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live website</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
                                             <li class="live-row">
-                    <div class="live-row__index" aria-hidden="true">04</div>
+                    <div class="live-row__index" aria-hidden="true">05</div>
 
                     <div class="live-row__main">
                         <div class="live-row__badges">
@@ -1365,52 +1408,20 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 wealthio.ir                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://wealthio.ir/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live platform</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://wealthio.ir/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live platform</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
-                                            <li class="live-row">
-                    <div class="live-row__index" aria-hidden="true">05</div>
-
-                    <div class="live-row__main">
-                        <div class="live-row__badges">
-                            <span class="live-row__live">
-                                <span class="live-pulse" aria-hidden="true"></span>
-                                Live
-                            </span>
-                            <span class="live-row__type">Website</span>
-                                                            <span class="live-row__related">Fanavaran</span>
-                                                    </div>
-
-                        <h3 class="live-row__name">Fanavaran</h3>
-
-                                                    <p class="live-row__blurb">Company website — alongside mobile and backend contributions at Fanavaran.</p>
-                        
-                        <div class="live-row__meta">
-                                                            <span>Web</span>
-                                                        <span class="live-row__host">
-                                <i class="fa-solid fa-link" aria-hidden="true"></i>
-                                fanavaran.ca                            </span>
-                        </div>
-                    </div>
-
-                    <a
-                        class="live-row__cta"
-                        href="https://fanavaran.ca/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live website</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
-                </li>
-                                            <li class="live-row">
+                                            <li class="live-row live-row--multi">
                     <div class="live-row__index" aria-hidden="true">06</div>
 
                     <div class="live-row__main">
@@ -1419,32 +1430,58 @@
                                 <span class="live-pulse" aria-hidden="true"></span>
                                 Live
                             </span>
-                            <span class="live-row__type">App</span>
-                                                            <span class="live-row__related">Fanavaran</span>
+                            <span class="live-row__type">Website + App</span>
+                                                            <span class="live-row__related">Fanavaran &amp; OpCollege</span>
                                                     </div>
 
-                        <h3 class="live-row__name">Fanavaran App</h3>
+                        <h3 class="live-row__name">Fanavaran</h3>
 
-                                                    <p class="live-row__blurb">Android &amp; iOS app live on Google Play and the App Store — React Native rebuild.</p>
+                                                    <p class="live-row__blurb">One organization — Fanavaran &amp; OpCollege websites plus the live Android/iOS app (React Native rebuild).</p>
                         
                         <div class="live-row__meta">
-                                                            <span>React Native</span>
+                                                            <span>React Native · Web</span>
                                                         <span class="live-row__host">
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
-                                apps.apple.com                            </span>
+                                fanavaran.ca                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://apps.apple.com/us/app/fanavaran/id6813155894"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open App Store</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://fanavaran.ca/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open website</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                                    <a
+                                        class="live-row__action live-row__action--secondary"
+                                        href="https://opcollege.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>OpCollege</span>
+                                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                    </a>
+                                                                    <a
+                                        class="live-row__action live-row__action--store"
+                                        href="https://apps.apple.com/us/app/fanavaran/id6813155894"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>App Store</span>
+                                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                    </a>
+                                                                    <a
+                                        class="live-row__action live-row__action--store"
+                                        href="https://play.google.com/store/apps/details?id=com.fanavaran.app&amp;hl=en"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Play Store</span>
+                                        <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
-                                            <li class="live-row">
+                                            <li class="live-row live-row--multi">
                     <div class="live-row__index" aria-hidden="true">07</div>
 
                     <div class="live-row__main">
@@ -1453,13 +1490,13 @@
                                 <span class="live-pulse" aria-hidden="true"></span>
                                 Live
                             </span>
-                            <span class="live-row__type">Website</span>
+                            <span class="live-row__type">Website + App</span>
                                                             <span class="live-row__related">NIU Nature (Healthcare App)</span>
                                                     </div>
 
                         <h3 class="live-row__name">NIU Nature</h3>
 
-                                                    <p class="live-row__blurb">Production healthcare app with backend-integrated dynamic content — live App Store audience.</p>
+                                                    <p class="live-row__blurb">Healthcare product with companion website and native Flutter app live on the App Store.</p>
                         
                         <div class="live-row__meta">
                                                             <span>Flutter</span>
@@ -1467,16 +1504,26 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 niu-nature.app                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://www.niu-nature.app/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live site</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://www.niu-nature.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open website</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                                    <a
+                                        class="live-row__action live-row__action--store"
+                                        href="https://apps.apple.com/de/app/niu-nature/id6450218644"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>App Store</span>
+                                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
                                             <li class="live-row">
                     <div class="live-row__index" aria-hidden="true">08</div>
@@ -1501,50 +1548,18 @@
                                 <i class="fa-solid fa-link" aria-hidden="true"></i>
                                 thesam912.github.io                            </span>
                         </div>
-                    </div>
 
-                    <a
-                        class="live-row__cta"
-                        href="https://thesam912.github.io/woocom"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live demo</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
-                </li>
-                                            <li class="live-row">
-                    <div class="live-row__index" aria-hidden="true">09</div>
-
-                    <div class="live-row__main">
-                        <div class="live-row__badges">
-                            <span class="live-row__live">
-                                <span class="live-pulse" aria-hidden="true"></span>
-                                Live
-                            </span>
-                            <span class="live-row__type">Website</span>
-                                                            <span class="live-row__related">Corefinity (Destinology)</span>
-                                                    </div>
-
-                        <h3 class="live-row__name">Corefinity</h3>
-
-                                                    <p class="live-row__blurb">Agency site for the Corefinity team behind Destinology — Laravel &amp; Vue.js delivery context.</p>
-                        
-                        <div class="live-row__meta">
-                                                            <span>Laravel · Vue.js</span>
-                                                        <span class="live-row__host">
-                                <i class="fa-solid fa-link" aria-hidden="true"></i>
-                                corefinity.com                            </span>
-                        </div>
-                    </div>
-
-                    <a
-                        class="live-row__cta"
-                        href="https://www.corefinity.com/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <span>Open live website</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                    </a>
+                                                    <div class="live-row__actions">
+                                                                    <a
+                                        class="live-row__action live-row__action--primary"
+                                        href="https://thesam912.github.io/woocom"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span>Open live demo</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                                            </div>
+                                            </div>
                 </li>
                     </ol>
     
@@ -1552,218 +1567,536 @@
     
 <section id="portfolio" class="portfolio-section">
 
-    <div
-        class="portfolio-head"
-        data-reveal="up">
-
+    <div class="portfolio-head" data-reveal="up">
         <span class="section-tag">
-
             <span class="tag-dot"></span>
-
-            FEATURED PROJECTS
-        </span>
+            FEATURED PROJECTS        </span>
 
         <div class="portfolio-head__row">
-            <h2 class="portfolio-title">
-
-                Featured
-                <span class="gradient-text">Projects.</span>
-
-            </h2>
-
-                            <p class="portfolio-swipe-hint" aria-hidden="true">
-                    <i class="fa-solid fa-hand-pointer"></i>
-                    Swipe
+            <div class="portfolio-head__copy">
+                <h2 class="portfolio-title">
+                    Featured                    <span class="gradient-text">Projects.</span>
+                </h2>
+                <p class="portfolio-lead">
+                    Websites, native apps, Flutter products, and PWAs — each card shows how the work ships.
                 </p>
-                    </div>
+            </div>
 
+                            <div class="portfolio-head__aside" aria-hidden="true">
+                    <span class="portfolio-head__pill">
+                        <i class="fa-solid fa-layer-group"></i>
+                        7 featured
+                    </span>
+                    <span class="portfolio-head__pill portfolio-head__pill--soft">
+                        Website · App · PWA
+                    </span>
+                </div>
+                    </div>
     </div>
 
-    <div class="portfolio-carousel" data-portfolio-carousel>
+            <div class="portfolio-showcase" data-reveal-stagger data-reveal="fade">
+                                            <article class="portfolio-case">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="0"
+                        aria-label="Preview Onzyro">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-onzyro.webp"
+                                alt="Onzyro preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
 
-        <div
-            class="portfolio-grid"
-            data-reveal-stagger
-            data-reveal="fade"
-            tabindex="0"
-            role="list"
-            aria-label="Selected projects">
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">01</span>
+                            <span class="portfolio-case__eyebrow">Commerce showcase</span>
+                        </div>
 
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="0"
-                    role="listitem"
-                    aria-label="View Onzyro">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-onzyro.webp"
-                            alt="Onzyro"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>Onzyro</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="1"
-                    role="listitem"
-                    aria-label="View Vesta">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-vesta.webp"
-                            alt="Vesta"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>Vesta</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="2"
-                    role="listitem"
-                    aria-label="View Destinology.co.uk">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-6.webp"
-                            alt="Destinology.co.uk"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>Destinology.co.uk</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="3"
-                    role="listitem"
-                    aria-label="View NIU Nature">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-2.webp"
-                            alt="NIU Nature"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>NIU Nature</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="4"
-                    role="listitem"
-                    aria-label="View WooCom Flutter E-Commerce">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-1.webp"
-                            alt="WooCom Flutter E-Commerce"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>WooCom Flutter E-Commerce</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="5"
-                    role="listitem"
-                    aria-label="View TimeSync Healthcare AI">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-3.webp"
-                            alt="TimeSync Healthcare AI"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>TimeSync Healthcare AI</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-                            <button
-                    type="button"
-                    class="portfolio-slide"
-                    data-portfolio-slide
-                    data-lightbox-index="6"
-                    role="listitem"
-                    aria-label="View Wealthio">
-                    <div class="portfolio-item">
-                        <img
-                            src="assets/images/portfolio/project-wealthio.webp"
-                            alt="Wealthio"
-                            loading="lazy"
-                            decoding="async"
-                            width="800"
-                            height="600">
-                        <div class="portfolio-overlay">
-                            <h4>Wealthio</h4>
-                            <span class="portfolio-view-hint">
-                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
-                                View
-                            </span>
-                        </div>
-                    </div>
-                </button>
-            
-        </div>
+                        <h3 class="portfolio-case__title">Onzyro</h3>
 
-                    <div class="portfolio-dots" data-portfolio-dots aria-hidden="true"></div>
-        
-    </div>
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                    </div>
 
+                                                    <p class="portfolio-case__note">RTL storefront + admin demo</p>
+                        
+                                                    <p class="portfolio-case__desc">Premium Persian footwear e-commerce — RTL Next.js storefront with catalog, checkout, wishlist, and admin showcase. Live demo on Vercel.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Next.js · TypeScript                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://ecommerce-shoes-swart.vercel.app/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="0">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case portfolio-case--flip">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="1"
+                        aria-label="Preview Vesta">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-vesta.webp"
+                                alt="Vesta preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">02</span>
+                            <span class="portfolio-case__eyebrow">Commerce showcase</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">Vesta</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">Studio catalog + product detail</p>
+                        
+                                                    <p class="portfolio-case__desc">Premium Persian watch e-commerce — RTL Next.js storefront with studio catalog media, product detail, and admin demo. Live showcase on Vercel.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Next.js · TypeScript                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://ecommerce-watch-five.vercel.app/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="1">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="2"
+                        aria-label="Preview Corefinity">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-corefinity.webp"
+                                alt="Corefinity preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">03</span>
+                            <span class="portfolio-case__eyebrow">AI infrastructure</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">Corefinity</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">MCP hosting platform for AI agents</p>
+                        
+                                                    <p class="portfolio-case__desc">AI-native hosting platform — MCP server with 400+ tools so agents can manage infrastructure, clusters, and sites with scoped access and full activity logging.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Laravel · Vue.js                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://www.corefinity.com/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="2">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case portfolio-case--flip">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="3"
+                        aria-label="Preview Destinology.co.uk">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-destinology.webp"
+                                alt="Destinology.co.uk preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">04</span>
+                            <span class="portfolio-case__eyebrow">Travel platform</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">Destinology.co.uk</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">Large-scale holiday booking product</p>
+                        
+                                                    <p class="portfolio-case__desc">Large-scale holiday booking platform (PHP Laravel, Vue.js) with dynamic destination search, filtering, and package selection, built and maintained alongside the Corefinity team.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Laravel · Vue.js                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://www.destinology.co.uk/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="3">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case portfolio-case--multi">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="4"
+                        aria-label="Preview NIU Nature">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-niu-nature.webp"
+                                alt="NIU Nature preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">05</span>
+                            <span class="portfolio-case__eyebrow">Healthcare product</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">NIU Nature</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                            <span class="portfolio-format portfolio-format--app">
+                                    <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                    Native App                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">Live App Store app + companion website</p>
+                        
+                                                    <p class="portfolio-case__desc">Production healthcare app with backend-integrated dynamic content, shipped and maintained for a live App Store audience.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Flutter                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://www.niu-nature.app/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                                                            <a
+                                    href="https://apps.apple.com/de/app/niu-nature/id6450218644"
+                                    class="portfolio-case__btn portfolio-case__btn--ghost"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    App Store
+                                    <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                                </a>
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="4">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case portfolio-case--flip portfolio-case--multi">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="5"
+                        aria-label="Preview WooCom Flutter E-Commerce">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-woocom.webp"
+                                alt="WooCom Flutter E-Commerce preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">06</span>
+                            <span class="portfolio-case__eyebrow">Flutter commerce</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">WooCom Flutter E-Commerce</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                            <span class="portfolio-format portfolio-format--app">
+                                    <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>
+                                    Flutter App                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">One codebase across web, tablet, and mobile</p>
+                        
+                                                    <p class="portfolio-case__desc">Fully responsive e-commerce app for web, tablet and mobile, with a Firebase backend for auth, product management and orders.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Flutter · Firebase                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://thesam912.github.io/woocom"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="5">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                                            <article class="portfolio-case portfolio-case--multi">
+                    <button
+                        type="button"
+                        class="portfolio-case__media"
+                        data-portfolio-slide
+                        data-lightbox-index="6"
+                        aria-label="Preview Wealthio">
+                        <span class="portfolio-case__chrome" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                        </span>
+                        <span class="portfolio-case__frame">
+                            <img
+                                src="assets/images/portfolio/project-wealthio.webp"
+                                alt="Wealthio preview"
+                                loading="lazy"
+                                decoding="async"
+                                width="960"
+                                height="600">
+                        </span>
+                        <span class="portfolio-case__preview">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            Preview
+                        </span>
+                    </button>
+
+                    <div class="portfolio-case__body">
+                        <div class="portfolio-case__meta">
+                            <span class="portfolio-case__num">07</span>
+                            <span class="portfolio-case__eyebrow">Founder venture</span>
+                        </div>
+
+                        <h3 class="portfolio-case__title">Wealthio</h3>
+
+                        <div class="portfolio-case__formats" aria-label="Delivery formats">
+                                                            <span class="portfolio-format portfolio-format--web">
+                                    <i class="fa-solid fa-link" aria-hidden="true"></i>
+                                    Website                                </span>
+                                                            <span class="portfolio-format portfolio-format--app">
+                                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                                    PWA                                </span>
+                                                    </div>
+
+                                                    <p class="portfolio-case__note">Installable Progressive Web App</p>
+                        
+                                                    <p class="portfolio-case__desc">Founded and built Wealthio as a personal business venture, owning product development from UI/UX design to backend implementation. Progressive Web App with a Next.js frontend and a PHP/Laravel backend.</p>
+                        
+                                                    <p class="portfolio-case__stack">
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                                Next.js · Laravel                            </p>
+                        
+                        <div class="portfolio-case__actions">
+                                                            <a
+                                    href="https://wealthio.ir/"
+                                    class="portfolio-case__btn"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Visit website
+                                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            
+                            
+                            <button
+                                type="button"
+                                class="portfolio-case__btn portfolio-case__btn--quiet"
+                                data-portfolio-slide
+                                data-lightbox-index="6">
+                                Open gallery
+                                <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+    
 </section>
 
 <dialog class="portfolio-lightbox" data-portfolio-lightbox aria-label="Project preview">
@@ -1780,19 +2113,32 @@
             <img src="" alt="" data-lightbox-image>
             <figcaption class="portfolio-lightbox__caption">
                 <div class="portfolio-lightbox__copy">
+                    <div class="portfolio-lightbox__formats" data-lightbox-formats hidden></div>
                     <h3 data-lightbox-title></h3>
                     <p data-lightbox-desc></p>
                 </div>
-                <a
-                    class="portfolio-lightbox__link"
-                    data-lightbox-link
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    hidden>
-                    Visit project
-                    <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                </a>
+                <div class="portfolio-lightbox__actions">
+                    <a
+                        class="portfolio-lightbox__link"
+                        data-lightbox-link
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden>
+                        Visit website
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    </a>
+                    <a
+                        class="portfolio-lightbox__link portfolio-lightbox__link--store"
+                        data-lightbox-store
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden>
+                        App Store
+                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                    </a>
+                </div>
             </figcaption>
         </figure>
 
@@ -1803,7 +2149,7 @@
 </dialog>
 
 <script type="application/json" id="portfolio-lightbox-data">
-[{"title":"Onzyro","desc":"Premium Persian footwear e-commerce — RTL Next.js storefront with catalog, checkout, wishlist, and admin showcase. Live demo on Vercel.","image":"assets/images/portfolio/project-onzyro.webp","url":"https://ecommerce-shoes-swart.vercel.app/"},{"title":"Vesta","desc":"Premium Persian watch e-commerce — RTL Next.js storefront with studio catalog media, product detail, and admin demo. Live showcase on Vercel.","image":"assets/images/portfolio/project-vesta.webp","url":"https://ecommerce-watch-swart.vercel.app/"},{"title":"Destinology.co.uk","desc":"Large-scale holiday booking platform (PHP Laravel, Vue.js) with dynamic destination search, filtering, and package selection, built and maintained alongside the Corefinity team.","image":"assets/images/portfolio/project-6.webp","url":"https://www.destinology.co.uk/"},{"title":"NIU Nature","desc":"Production healthcare app with backend-integrated dynamic content, shipped and maintained for a live App Store audience.","image":"assets/images/portfolio/project-2.webp","url":"https://www.niu-nature.app/"},{"title":"WooCom Flutter E-Commerce","desc":"Fully responsive e-commerce app for web, tablet and mobile, with a Firebase backend for auth, product management and orders.","image":"assets/images/portfolio/project-1.webp","url":"https://thesam912.github.io/woocom"},{"title":"TimeSync Healthcare AI","desc":"OpenAI-powered Flutter app delivering personalized health plans, backed by a Node.js/MongoDB service with Firebase real-time notifications.","image":"assets/images/portfolio/project-3.webp","url":"https://github.com/TheSam912"},{"title":"Wealthio","desc":"Founded and built Wealthio as a personal business venture, owning product development from UI/UX design to backend implementation. Progressive Web App with a Next.js frontend and a PHP/Laravel backend.","image":"assets/images/portfolio/project-wealthio.webp","url":"https://wealthio.ir/"}]</script>
+[{"title":"Onzyro","desc":"Premium Persian footwear e-commerce — RTL Next.js storefront with catalog, checkout, wishlist, and admin showcase. Live demo on Vercel.","image":"assets/images/portfolio/project-onzyro.webp","url":"https://ecommerce-shoes-swart.vercel.app/","storeUrl":null,"formats":["Website"]},{"title":"Vesta","desc":"Premium Persian watch e-commerce — RTL Next.js storefront with studio catalog media, product detail, and admin demo. Live showcase on Vercel.","image":"assets/images/portfolio/project-vesta.webp","url":"https://ecommerce-watch-five.vercel.app/","storeUrl":null,"formats":["Website"]},{"title":"Corefinity","desc":"AI-native hosting platform — MCP server with 400+ tools so agents can manage infrastructure, clusters, and sites with scoped access and full activity logging.","image":"assets/images/portfolio/project-corefinity.webp","url":"https://www.corefinity.com/","storeUrl":null,"formats":["Website"]},{"title":"Destinology.co.uk","desc":"Large-scale holiday booking platform (PHP Laravel, Vue.js) with dynamic destination search, filtering, and package selection, built and maintained alongside the Corefinity team.","image":"assets/images/portfolio/project-destinology.webp","url":"https://www.destinology.co.uk/","storeUrl":null,"formats":["Website"]},{"title":"NIU Nature","desc":"Production healthcare app with backend-integrated dynamic content, shipped and maintained for a live App Store audience.","image":"assets/images/portfolio/project-niu-nature.webp","url":"https://www.niu-nature.app/","storeUrl":"https://apps.apple.com/de/app/niu-nature/id6450218644","formats":["Website","Native App"]},{"title":"WooCom Flutter E-Commerce","desc":"Fully responsive e-commerce app for web, tablet and mobile, with a Firebase backend for auth, product management and orders.","image":"assets/images/portfolio/project-woocom.webp","url":"https://thesam912.github.io/woocom","storeUrl":null,"formats":["Website","Flutter App"]},{"title":"Wealthio","desc":"Founded and built Wealthio as a personal business venture, owning product development from UI/UX design to backend implementation. Progressive Web App with a Next.js frontend and a PHP/Laravel backend.","image":"assets/images/portfolio/project-wealthio.webp","url":"https://wealthio.ir/","storeUrl":null,"formats":["Website","PWA"]}]</script>
     <section id="contact" class="contact-section">
 
     <div class="contact-wrapper">
@@ -1923,7 +2269,13 @@
     <div class="footer-wrapper">
 
         <a href="#hero" class="footer-logo">
-            <img src="assets/images/logo.png" alt="Sobhan Daroogheh">
+            <img
+                src="assets/images/logo.webp"
+                alt="Sobhan Daroogheh"
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="120">
         </a>
 
         <div class="footer-copy">
